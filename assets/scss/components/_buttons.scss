@@ -15,11 +15,17 @@
   font-family: $font-heading;
   font-size: 20px;
   font-weight: 700;
-  padding: 14px 28px;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
   transition: transform $transition-fast;
+}
+
+.btn-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 30px;
 }
 
 .btn-edge {
@@ -43,20 +49,29 @@
   bottom: -4px;
 }
 
+// Social icon buttons
 .btn-social {
   position: relative;
   display: inline-block;
 
   .btn-front {
-    padding: 10px 12px;
+    padding: 7px 9px;
     font-size: 16px;
   }
 
   .btn-edge {
     bottom: -5px;
+    background-color: $purple;
+  }
+
+  .social-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
   }
 }
 
+// Text link style (View Case Study →)
 .btn-link {
   display: inline-flex;
   align-items: center;

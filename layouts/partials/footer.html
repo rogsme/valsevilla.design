@@ -2,12 +2,12 @@
   <div class="container cc-narrow">
     <div class="site-details">
       <div class="footer-row">
-        <p class="footer-copy">&copy; All rights reserved. Made with Love &lt;3</p>
+        <p class="footer-copy margin-bottom-none">&copy; All rights reserved. Made with Love &lt;3</p>
         <div class="footer-social">
           {{ range hugo.Data.social.links }}
             <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="btn-social btn-3d" aria-label="{{ .name }}">
               <div class="btn-front">
-                <div class="button-social-text">{{ .icon }}</div>
+                <img src="/images/social/{{ .icon }}.svg" alt="{{ .name }}" class="social-icon">
               </div>
               <div class="btn-edge"></div>
             </a>

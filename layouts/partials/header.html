@@ -17,7 +17,7 @@
         {{ range hugo.Data.social.links }}
           <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="btn-social btn-3d" aria-label="{{ .name }}">
             <div class="btn-front">
-              <div class="button-social-text">{{ .icon }}</div>
+              <img src="/images/social/{{ .icon }}.svg" alt="{{ .name }}" class="social-icon">
             </div>
             <div class="btn-edge"></div>
           </a>

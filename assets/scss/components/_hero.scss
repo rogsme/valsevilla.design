@@ -52,26 +52,19 @@
   }
 }
 
-// Star badge on hero
+// Star badge on hero — positioned top-left, overlapping image
 .hero-image-wrapper .star-badge {
-  top: 10px;
-  left: -20px;
-  width: 100px;
-  height: 100px;
-
-  @include respond-to(md) {
-    top: 20px;
-    left: -10px;
-  }
+  top: -6px;
+  left: -47px;
 }
 
-// Doodles on hero
+// Doodles on hero — positioned relative to the image
 .hero-image-wrapper .doodle-shine {
-  top: 30%;
-  right: 10%;
+  top: 40%;
+  right: -20px;
 }
 
 .hero-image-wrapper .doodle-breeze {
-  bottom: 15%;
-  right: -5%;
+  bottom: 20%;
+  right: -40px;
 }

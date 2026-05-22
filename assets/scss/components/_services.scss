@@ -4,6 +4,17 @@
   }
 }
 
+.services {
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include respond-to(md) {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+}
+
 .headline-services {
   text-align: center;
   max-width: 700px;
@@ -14,11 +25,14 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-bottom: 40px;
 
   @include respond-to(md) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
   }
 }
 
@@ -26,6 +40,7 @@
   border: $border;
   border-radius: $radius;
   padding: 40px;
+  text-align: left;
 
   &.background-purple { background-color: $purple; }
   &.background-green { background-color: $green; }
@@ -57,20 +72,7 @@
   margin-bottom: 10px;
 }
 
-.service p,
 .service div:not(.icon) > div {
   font-size: $font-size-base;
   line-height: 1.6;
-  color: $dark;
-}
-
-// Doodles around services
-.services-section .doodle-flash {
-  top: 40%;
-  right: 5%;
-}
-
-.services-section .doodle-shine-purple {
-  width: 20px;
-  height: 20px;
 }
