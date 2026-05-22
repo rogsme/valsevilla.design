@@ -1,0 +1,72 @@
+.timeline {
+  margin-top: 48px;
+
+  @include respond-to(md) {
+    margin-top: 0;
+  }
+}
+
+.timeline-title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: 32px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  padding-bottom: 32px;
+  position: relative;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.timeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  &.dot-purple { background-color: $purple; }
+  &.dot-pink { background-color: $pink; }
+  &.dot-green { background-color: $green; }
+  &.dot-blue { background-color: $blue; }
+  &.dot-red { background-color: $red; }
+}
+
+.timeline-line {
+  width: 2px;
+  flex: 1;
+  background-color: rgba($dark, 0.1);
+  margin-top: 8px;
+}
+
+.timeline-content {
+  padding-top: 0;
+}
+
+.timeline-company {
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-base;
+}
+
+.timeline-role {
+  font-size: $font-size-sm;
+  color: $gray;
+  margin-top: 2px;
+}
+
+.timeline-period {
+  font-size: 12px;
+  color: $gray;
+  margin-top: 4px;
+}

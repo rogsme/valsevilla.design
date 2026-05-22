@@ -1,0 +1,34 @@
+{{ define "body_classes" }}page-project{{ end }}
+
+{{ define "main" }}
+  <section class="project-hero">
+    <div class="container">
+      {{ with .Params.category }}
+        <span class="project-category">{{ . }}</span>
+      {{ end }}
+      <h1 class="project-title">{{ .Title }}</h1>
+      {{ with .Params.description }}
+        <p class="project-description">{{ . }}</p>
+      {{ end }}
+    </div>
+  </section>
+
+  {{ with .Params.thumbnail }}
+    <div class="container">
+      <img src="/images/projects/{{ . }}" alt="{{ $.Title }}" style="width: 100%; border-radius: 16px; margin-bottom: 48px;">
+    </div>
+  {{ end }}
+
+  <div class="container">
+    <div class="project-content">
+      {{ .Content }}
+    </div>
+
+    <nav class="project-nav">
+      <a href="/#portfolio">&larr; All projects</a>
+      {{ with .NextInSection }}
+        <a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>
+      {{ end }}
+    </nav>
+  </div>
+{{ end }}

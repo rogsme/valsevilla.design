@@ -1,0 +1,47 @@
+.services {
+  background-color: $off-white;
+}
+
+.service-card {
+  background-color: $white;
+  border-radius: $radius-lg;
+  padding: 32px;
+  transition: transform $transition-fast, box-shadow $transition-fast;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: $radius-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  &.color-purple { background-color: rgba($purple, 0.12); color: $purple; }
+  &.color-pink { background-color: rgba($pink, 0.12); color: $pink; }
+  &.color-green { background-color: rgba($green, 0.12); color: $green; }
+  &.color-blue { background-color: rgba($blue, 0.12); color: $blue; }
+}
+
+.service-title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  margin-bottom: 12px;
+}
+
+.service-description {
+  color: $gray;
+  font-size: $font-size-sm;
+  line-height: 1.6;
+}

@@ -1,0 +1,66 @@
+.hero {
+  padding-top: $section-padding-y-mobile;
+  padding-bottom: $section-padding-y-mobile;
+
+  @include respond-to(md) {
+    padding-top: $section-padding-y;
+    padding-bottom: $section-padding-y;
+  }
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+
+  @include respond-to(md) {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+}
+
+.hero-content {
+  order: 2;
+
+  @include respond-to(md) {
+    order: 1;
+  }
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: $off-white;
+  border-radius: $radius-full;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  margin-bottom: 24px;
+}
+
+.hero-heading {
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: $font-size-lg;
+  color: $gray;
+  margin-bottom: 32px;
+  max-width: 480px;
+}
+
+.hero-image {
+  order: 1;
+
+  @include respond-to(md) {
+    order: 2;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: $radius-lg;
+  }
+}

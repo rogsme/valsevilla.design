@@ -1,0 +1,26 @@
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="site-logo">
+        {{ $logo := "images/logo.svg" }}
+        {{ if (fileExists (printf "static/%s" $logo)) }}
+          <img src="/{{ $logo }}" alt="{{ site.Title }}">
+        {{ else }}
+          <span>Val Sevilla</span>
+        {{ end }}
+      </a>
+
+      <nav class="nav-desktop">
+        {{ range site.Menus.main }}
+          <a href="{{ .URL }}"{{ if .Params.external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Name }}</a>
+        {{ end }}
+      </nav>
+
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>

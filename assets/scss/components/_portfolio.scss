@@ -1,0 +1,62 @@
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+
+  @include respond-to(md) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.portfolio-card {
+  display: block;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  background-color: $off-white;
+  transition: transform $transition-fast, box-shadow $transition-fast;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $shadow-lg;
+
+    .portfolio-card-image img {
+      transform: scale(1.03);
+    }
+  }
+}
+
+.portfolio-card-image {
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform $transition-base;
+  }
+}
+
+.portfolio-card-content {
+  padding: 24px;
+}
+
+.portfolio-card-category {
+  font-size: 12px;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $accent;
+  margin-bottom: 8px;
+}
+
+.portfolio-card-title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+}
+
+.portfolio-card-description {
+  font-size: $font-size-sm;
+  color: $gray;
+  margin-top: 8px;
+}

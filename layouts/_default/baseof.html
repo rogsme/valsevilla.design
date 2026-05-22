@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang }}">
+  {{ partial "head.html" . }}
+  <body class="{{ block "body_classes" . }}{{ end }}">
+    {{ partial "mobile-menu.html" . }}
+    {{ partial "header.html" . }}
+    <div class="header-spacer"></div>
+
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    {{ $js := resources.Get "js/main.js" }}
+    <script src="{{ ($js | minify | fingerprint).RelPermalink }}"></script>
+  </body>
+</html>

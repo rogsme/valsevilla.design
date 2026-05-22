@@ -1,0 +1,23 @@
+[[items]]
+  title = "Strategy"
+  description = "Defining clear product visions and strategies that align business goals with user needs through research-driven decision making."
+  icon = "/images/icons/icon-1.svg"
+  color = "purple"
+
+[[items]]
+  title = "Research"
+  description = "Understanding users through interviews, surveys, and usability testing to uncover insights that drive meaningful design decisions."
+  icon = "/images/icons/icon-2.svg"
+  color = "pink"
+
+[[items]]
+  title = "Empathize"
+  description = "Building deep empathy for users by mapping their journeys, identifying pain points, and understanding their motivations."
+  icon = "/images/icons/icon-heart.svg"
+  color = "green"
+
+[[items]]
+  title = "Design"
+  description = "Crafting intuitive interfaces and experiences from wireframes to high-fidelity prototypes, grounded in user research."
+  icon = "/images/icons/icon-3.svg"
+  color = "blue"

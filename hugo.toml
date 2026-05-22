@@ -1,0 +1,64 @@
+baseURL = "https://valsevilla.design/"
+locale = "en"
+title = "Val Sevilla - Product Designer"
+
+enableRobotsTXT = true
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.161.0"
+
+[params]
+  author = "Val Sevilla"
+  description = "Product Designer specializing in user experience, research, and digital design"
+  tagline = "UX / Product Designer"
+  email = "hello@valsevilla.design"
+  resumeUrl = "/images/cv-val-sevilla.pdf"
+  blogUrl = "https://bootcamp.uxdesign.cc/how-i-landed-my-first-ux-design-job-as-a-self-taught-designer-e9ccc35aaad"
+  formspreeEndpoint = "https://formspree.io/f/PLACEHOLDER"
+
+  [params.hero]
+    greeting = "Hello! I'm Val"
+    heading = "I design products that people love to use"
+    subheading = "UX / Product Designer with 5+ years of experience creating user-centered digital experiences"
+    ctaText = "View my work"
+    ctaLink = "#portfolio"
+
+  [params.about]
+    yearsExperience = "5+"
+    bio = "I'm a product designer who is passionate about creating meaningful digital experiences. With a background in UX research and UI design, I bring a user-centered approach to every project I work on."
+
+  [params.meta]
+    ogImage = "/images/og-image.jpg"
+    ogDescription = "Val Sevilla - Product Designer specializing in user experience and digital design"
+
+[[menus.main]]
+  name = "Services"
+  url = "/#services"
+  weight = 1
+
+[[menus.main]]
+  name = "About"
+  url = "/#about"
+  weight = 2
+
+[[menus.main]]
+  name = "Portfolio"
+  url = "/#portfolio"
+  weight = 3
+
+[[menus.main]]
+  name = "Blog"
+  url = "https://bootcamp.uxdesign.cc/how-i-landed-my-first-ux-design-job-as-a-self-taught-designer-e9ccc35aaad"
+  weight = 4
+  [menus.main.params]
+    external = true
+
+[[menus.main]]
+  name = "Contact"
+  url = "/#contact"
+  weight = 5
+
+[markup.goldmark.renderer]
+  unsafe = true

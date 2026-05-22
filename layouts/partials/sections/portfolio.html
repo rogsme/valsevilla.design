@@ -1,0 +1,27 @@
+<section id="portfolio" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Selected work</h2>
+    </div>
+    <div class="portfolio-grid">
+      {{ range (where site.RegularPages "Section" "projects").ByWeight }}
+        <a href="{{ .RelPermalink }}" class="portfolio-card">
+          <div class="portfolio-card-image">
+            {{ with .Params.thumbnail }}
+              <img src="/images/projects/{{ . }}" alt="{{ $.Title }}">
+            {{ end }}
+          </div>
+          <div class="portfolio-card-content">
+            {{ with .Params.category }}
+              <div class="portfolio-card-category">{{ . }}</div>
+            {{ end }}
+            <h3 class="portfolio-card-title">{{ .Title }}</h3>
+            {{ with .Params.summary }}
+              <p class="portfolio-card-description">{{ . }}</p>
+            {{ end }}
+          </div>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</section>

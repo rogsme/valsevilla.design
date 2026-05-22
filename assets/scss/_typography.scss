@@ -1,0 +1,49 @@
+h1, h2, h3, h4, h5, h6 {
+  line-height: $line-height-heading;
+  font-weight: $font-weight-bold;
+}
+
+h1 {
+  font-size: $font-size-3xl;
+  @include respond-to(md) {
+    font-size: $font-size-4xl;
+  }
+}
+
+h2 {
+  font-size: $font-size-2xl;
+  @include respond-to(md) {
+    font-size: $font-size-3xl;
+  }
+}
+
+h3 {
+  font-size: $font-size-xl;
+}
+
+p {
+  margin-bottom: 1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.text-sm {
+  font-size: $font-size-sm;
+}
+
+.text-lg {
+  font-size: $font-size-lg;
+}
+
+.text-gray {
+  color: $gray;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}

@@ -1,0 +1,48 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: $radius-full;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-base;
+  transition: transform $transition-fast, box-shadow $transition-fast;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.btn-primary {
+  background-color: $dark;
+  color: $white;
+
+  &:hover {
+    background-color: lighten($dark, 8%);
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: $dark;
+  border: 2px solid $dark;
+
+  &:hover {
+    background-color: $dark;
+    color: $white;
+  }
+}
+
+.btn-accent {
+  background-color: $accent;
+  color: $white;
+
+  &:hover {
+    background-color: darken($accent, 8%);
+  }
+}

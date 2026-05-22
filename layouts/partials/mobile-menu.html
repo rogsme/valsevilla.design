@@ -1,0 +1,5 @@
+<nav class="mobile-menu" aria-label="Mobile navigation">
+  {{ range site.Menus.main }}
+    <a href="{{ .URL }}"{{ if .Params.external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Name }}</a>
+  {{ end }}
+</nav>

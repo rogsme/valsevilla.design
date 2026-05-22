@@ -1,0 +1,40 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+
+  @include respond-to(md) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.about-content {
+  p {
+    color: $gray-dark;
+    font-size: $font-size-lg;
+    line-height: 1.7;
+  }
+}
+
+.about-image {
+  position: relative;
+
+  img {
+    width: 100%;
+    border-radius: $radius-lg;
+  }
+}
+
+.experience-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: $accent;
+  color: $white;
+  border-radius: $radius-full;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  margin-top: 24px;
+}

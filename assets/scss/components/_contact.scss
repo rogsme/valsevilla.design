@@ -1,0 +1,79 @@
+.contact {
+  background-color: $dark;
+  color: $white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+
+  @include respond-to(md) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.contact-info {
+  h2 {
+    color: $white;
+    margin-bottom: 16px;
+  }
+
+  p {
+    color: rgba($white, 0.7);
+    font-size: $font-size-lg;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    color: rgba($white, 0.8);
+  }
+
+  input,
+  textarea {
+    padding: 14px 16px;
+    background-color: rgba($white, 0.08);
+    border: 1px solid rgba($white, 0.15);
+    border-radius: $radius-sm;
+    color: $white;
+    font-size: $font-size-base;
+    transition: border-color $transition-fast;
+
+    &::placeholder {
+      color: rgba($white, 0.35);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $accent;
+    }
+  }
+
+  textarea {
+    min-height: 140px;
+    resize: vertical;
+  }
+}
+
+.contact .btn-accent {
+  width: 100%;
+  justify-content: center;
+
+  @include respond-to(md) {
+    width: auto;
+  }
+}
