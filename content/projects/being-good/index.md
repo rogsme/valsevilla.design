@@ -3,7 +3,7 @@ title: "Being Good"
 description: "A social impact platform connecting volunteers with meaningful community opportunities"
 date: 2023-08-01
 category: "Social Impact"
-summary: "A platform connecting volunteers with meaningful community opportunities"
+summary: "Being Good: Your path to mental and physical well-being. Guiding you with meditation, exercise, healthy habits, and professional therapy support"
 thumbnail: "being-good-thumb.png"
 weight: 3
 ---

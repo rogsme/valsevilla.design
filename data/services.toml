@@ -1,23 +1,23 @@
 [[items]]
-  title = "Strategy"
-  description = "Defining clear product visions and strategies that align business goals with user needs through research-driven decision making."
+  title = "Strategy & Planning"
+  description = "I kick off every project by developing a solid strategy and comprehensive plan. This involves understanding your business goals, target audience, and project requirements to lay the groundwork for success."
   icon = "/images/icons/icon-1.svg"
   color = "purple"
 
 [[items]]
-  title = "Research"
-  description = "Understanding users through interviews, surveys, and usability testing to uncover insights that drive meaningful design decisions."
+  title = "User Research"
+  description = "In-depth research is key to uncovering valuable insights about your users and their needs. I conduct user interviews, analyze competitor landscapes, and gather data to inform the design process."
   icon = "/images/icons/icon-2.svg"
-  color = "pink"
-
-[[items]]
-  title = "Empathize"
-  description = "Building deep empathy for users by mapping their journeys, identifying pain points, and understanding their motivations."
-  icon = "/images/icons/icon-heart.svg"
   color = "green"
 
 [[items]]
+  title = "Emphatize"
+  description = "Understanding the user's perspective is crucial. I put myself in their shoes, empathizing with their goals, motivations, and pain points. This helps me design solutions that truly meet their needs."
+  icon = "/images/icons/icon-heart.svg"
+  color = "red"
+
+[[items]]
   title = "Design"
-  description = "Crafting intuitive interfaces and experiences from wireframes to high-fidelity prototypes, grounded in user research."
+  description = "Armed with research insights, I dive into the creative process. I sketch wireframes, create prototypes, and craft intuitive user interfaces that blend aesthetics with functionality. I focus on delivering a seamless and delightful user experience."
   icon = "/images/icons/icon-3.svg"
-  color = "blue"
+  color = "pink"

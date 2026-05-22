@@ -3,7 +3,7 @@ title: "Rise Fintech"
 description: "A fintech application making personal finance management accessible and intuitive"
 date: 2023-05-01
 category: "Fintech"
-summary: "Making personal finance management accessible and intuitive for everyone"
+summary: "Rise is a financial solution built for new business owners to collect, spend, and manage money."
 thumbnail: "rise-thumb.webp"
 weight: 4
 ---

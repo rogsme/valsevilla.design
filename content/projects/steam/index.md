@@ -3,7 +3,7 @@ title: "Steam"
 description: "A redesign concept for the Steam gaming platform focusing on improved discovery and social features"
 date: 2023-11-01
 category: "Web Platform"
-summary: "A redesign concept improving game discovery and social features on Steam"
+summary: "Steam is an online platform from game developer Valve where you can buy, play, create, and discuss PC games."
 thumbnail: "steam-thumb.png"
 weight: 2
 ---

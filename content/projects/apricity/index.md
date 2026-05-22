@@ -3,7 +3,7 @@ title: "Apricity"
 description: "A wellness and mental health app designed to help users build positive daily habits"
 date: 2024-01-15
 category: "Mobile App"
-summary: "A wellness app helping users build positive daily habits through mindful design"
+summary: "Apricity is a conceptual platform designed to inspire global change by addressing existential threats through innovative, nature-focused solutions"
 thumbnail: "apricity-thumb.png"
 weight: 1
 ---
