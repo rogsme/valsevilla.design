@@ -1,9 +1,9 @@
 .hero-section {
   .wrapper {
-    padding: 60px 0 80px;
+    padding: 80px 0 60px;
 
     @include respond-to(md) {
-      padding: 80px 0 100px;
+      padding: 120px 0 100px;
     }
   }
 }
@@ -15,8 +15,8 @@
   align-items: center;
 
   @include respond-to(md) {
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    grid-template-columns: 5fr 7fr;
+    gap: 0;
   }
 }
 
@@ -28,6 +28,10 @@
     order: 2;
     text-align: left;
   }
+
+  .paragraph-wrapper {
+    max-width: 600px;
+  }
 }
 
 .hero-image-wrapper {
@@ -36,6 +40,38 @@
 
   @include respond-to(md) {
     order: 1;
+    justify-self: start;
+  }
+
+  .star-badge {
+    top: -6px;
+    left: -47px;
+  }
+
+  .doodle-shine {
+    top: 40%;
+    right: -20px;
+  }
+
+  .doodle-breeze {
+    bottom: 20%;
+    right: -40px;
+  }
+
+  @include respond-to(md) {
+    .doodle-shine {
+      width: 58px;
+      height: 53px;
+      top: 95px;
+      right: -70px;
+    }
+
+    .doodle-breeze {
+      width: 134px;
+      height: 95px;
+      top: 157px;
+      right: -83px;
+    }
   }
 }
 
@@ -50,21 +86,4 @@
   @include respond-to(md) {
     margin: 0;
   }
-}
-
-// Star badge on hero — positioned top-left, overlapping image
-.hero-image-wrapper .star-badge {
-  top: -6px;
-  left: -47px;
-}
-
-// Doodles on hero — positioned relative to the image
-.hero-image-wrapper .doodle-shine {
-  top: 40%;
-  right: -20px;
-}
-
-.hero-image-wrapper .doodle-breeze {
-  bottom: 20%;
-  right: -40px;
 }
