@@ -1,24 +1,41 @@
 h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
   line-height: $line-height-heading;
-  font-weight: $font-weight-bold;
+  font-weight: 700;
+  color: $dark;
 }
 
-h1 {
-  font-size: $font-size-3xl;
+.display-1 {
+  font-size: 45px;
+  line-height: 52px;
+  letter-spacing: -0.01rem;
+
   @include respond-to(md) {
-    font-size: $font-size-4xl;
+    font-size: 70px;
+    line-height: 1.15;
   }
 }
 
-h2 {
-  font-size: $font-size-2xl;
+.display-2 {
+  font-size: 37px;
+  line-height: 44px;
+  letter-spacing: -0.01rem;
+
   @include respond-to(md) {
-    font-size: $font-size-3xl;
+    font-size: 50px;
+    line-height: 1.2;
   }
 }
 
-h3 {
-  font-size: $font-size-xl;
+.display-3 {
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: -0.01rem;
+
+  @include respond-to(md) {
+    font-size: 40px;
+    line-height: 1.25;
+  }
 }
 
 p {
@@ -29,21 +46,23 @@ p {
   }
 }
 
-.text-sm {
-  font-size: $font-size-sm;
-}
-
-.text-lg {
+.paragraph-large {
   font-size: $font-size-lg;
-}
-
-.text-gray {
-  color: $gray;
+  line-height: 1.6;
 }
 
 .label {
+  font-family: $font-heading;
   font-size: 12px;
-  font-weight: $font-weight-semibold;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
 }
+
+.margin-bottom-15 { margin-bottom: 15px; }
+.margin-bottom-20 { margin-bottom: 20px; }
+.margin-bottom-25 { margin-bottom: 25px; }
+.margin-bottom-30 { margin-bottom: 30px; }
+.margin-bottom-35 { margin-bottom: 35px; }
+.margin-bottom-45 { margin-bottom: 45px; }
+.margin-bottom-none { margin-bottom: 0; }

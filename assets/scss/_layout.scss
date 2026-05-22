@@ -5,45 +5,40 @@
   padding: 0 $container-padding;
 }
 
+.container.cc-narrow {
+  max-width: 960px;
+}
+
 .section {
+  // sections in webflow don't have inherent padding — wrappers do
+}
+
+.wrapper {
   padding: $section-padding-y-mobile 0;
 
   @include respond-to(md) {
     padding: $section-padding-y 0;
   }
-}
 
-.section-header {
-  margin-bottom: 48px;
+  &.border-bottom {
+    border-bottom: $border;
+  }
 
-  @include respond-to(md) {
-    margin-bottom: 64px;
+  &.background-purple {
+    background-color: $purple;
+  }
+
+  &.background-white {
+    background-color: $white;
   }
 }
 
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-
-  @include respond-to(md) {
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-  }
+.position-relative {
+  position: relative;
 }
 
-.grid-4 {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-
-  @include respond-to(sm) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @include respond-to(lg) {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .visually-hidden {
