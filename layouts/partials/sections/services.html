@@ -1,18 +1,31 @@
-<section id="services" class="section services">
-  <div class="container">
-    <div class="section-header">
-      <h2>What I do</h2>
-    </div>
-    <div class="grid-4">
-      {{ range hugo.Data.services.items }}
-        <div class="service-card">
-          <div class="service-icon color-{{ .color }}">
-            <img src="{{ .icon }}" alt="{{ .title }}">
+<section id="services" class="services-section">
+  <div class="wrapper border-bottom">
+    <div class="container">
+      <div class="services position-relative">
+        <img src="/images/doodles/doodle-star.svg" loading="lazy" alt="" class="doodle-shine-purple" style="position: absolute; top: 0; right: 10%;">
+        <div class="position-relative">
+          <div class="headline-services">
+            <div class="badge margin-bottom-30">
+              <div class="badge-text"><span class="shape-label"></span>My process</div>
+            </div>
+            <h2 class="display-2">I'm a continuous learner, so I'm always improving my process</h2>
           </div>
-          <h3 class="service-title">{{ .title }}</h3>
-          <p class="service-description">{{ .description }}</p>
+          <img src="/images/doodles/doodle-flash.svg" loading="lazy" alt="" class="doodle-flash" style="position: absolute; bottom: 20%; right: -20px;">
         </div>
-      {{ end }}
+        <div class="services-grid">
+          {{ range hugo.Data.services.items }}
+            <div class="card background-{{ .color }}">
+              <div class="service">
+                <div class="icon"><img src="{{ .icon }}" loading="lazy" alt=""></div>
+                <div>
+                  <h3>{{ .title }}</h3>
+                  <div>{{ .description }}</div>
+                </div>
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -1,0 +1,32 @@
+.badge {
+  display: inline-block;
+  border: $border;
+  background-color: $orange;
+  color: $dark;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: $radius-badge;
+  padding: 5px 13px 3px;
+  font-family: $font-heading;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+.badge-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.shape-label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url('/images/shapes/shape-label.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 4px;
+}

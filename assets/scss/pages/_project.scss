@@ -1,25 +1,25 @@
 .project-hero {
-  padding-top: $section-padding-y-mobile;
-  padding-bottom: $section-padding-y-mobile;
+  padding: $section-padding-y-mobile 0;
   text-align: center;
 
   @include respond-to(md) {
-    padding-top: $section-padding-y;
-    padding-bottom: 48px;
+    padding: $section-padding-y 0 48px;
   }
 }
 
 .project-category {
   display: inline-block;
   padding: 6px 16px;
-  border-radius: $radius-full;
+  border-radius: $radius-badge;
+  font-family: $font-heading;
   font-size: 12px;
-  font-weight: $font-weight-semibold;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   margin-bottom: 20px;
+  border: $border;
   background-color: $off-white;
-  color: $gray-dark;
+  color: $dark;
 }
 
 .project-title {
@@ -29,7 +29,8 @@
 
 .project-description {
   font-size: $font-size-lg;
-  color: $gray;
+  color: $dark;
+  opacity: 0.7;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -50,13 +51,13 @@
   }
 
   p {
-    color: $gray-dark;
     font-size: $font-size-lg;
     line-height: 1.8;
   }
 
   img {
-    border-radius: $radius-md;
+    border-radius: $radius;
+    border: $border;
     margin: 32px 0;
   }
 
@@ -66,7 +67,6 @@
     margin-bottom: 1em;
 
     li {
-      color: $gray-dark;
       font-size: $font-size-lg;
       line-height: 1.7;
       margin-bottom: 8px;
@@ -79,7 +79,7 @@
 }
 
 .project-nav {
-  border-top: 1px solid rgba($dark, 0.1);
+  border-top: $border;
   padding: 32px 0;
   display: flex;
   justify-content: space-between;
@@ -88,15 +88,13 @@
   margin: 0 auto;
 
   a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: $font-weight-medium;
-    color: $gray;
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $dark;
     transition: color $transition-fast;
 
     &:hover {
-      color: $dark;
+      color: $primary;
     }
   }
 }

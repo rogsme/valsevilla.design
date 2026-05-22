@@ -1,10 +1,10 @@
-.hero {
-  padding-top: $section-padding-y-mobile;
-  padding-bottom: $section-padding-y-mobile;
+.hero-section {
+  .wrapper {
+    padding: 60px 0 80px;
 
-  @include respond-to(md) {
-    padding-top: $section-padding-y;
-    padding-bottom: $section-padding-y;
+    @include respond-to(md) {
+      padding: 80px 0 100px;
+    }
   }
 }
 
@@ -22,45 +22,56 @@
 
 .hero-content {
   order: 2;
+  text-align: center;
+
+  @include respond-to(md) {
+    order: 2;
+    text-align: left;
+  }
+}
+
+.hero-image-wrapper {
+  order: 1;
+  position: relative;
 
   @include respond-to(md) {
     order: 1;
   }
 }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  background-color: $off-white;
-  border-radius: $radius-full;
-  font-size: $font-size-sm;
-  font-weight: $font-weight-medium;
-  margin-bottom: 24px;
-}
-
-.hero-heading {
-  margin-bottom: 20px;
-}
-
-.hero-description {
-  font-size: $font-size-lg;
-  color: $gray;
-  margin-bottom: 32px;
-  max-width: 480px;
-}
-
 .hero-image {
-  order: 1;
+  border: $border;
+  border-radius: 300px 300px $radius $radius;
+  width: 327px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
 
   @include respond-to(md) {
-    order: 2;
+    margin: 0;
   }
+}
 
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: $radius-lg;
+// Star badge on hero
+.hero-image-wrapper .star-badge {
+  top: 10px;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+
+  @include respond-to(md) {
+    top: 20px;
+    left: -10px;
   }
+}
+
+// Doodles on hero
+.hero-image-wrapper .doodle-shine {
+  top: 30%;
+  right: 10%;
+}
+
+.hero-image-wrapper .doodle-breeze {
+  bottom: 15%;
+  right: -5%;
 }

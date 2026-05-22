@@ -1,10 +1,13 @@
 @import 'variables';
+@import 'fonts';
 @import 'reset';
 @import 'typography';
 @import 'layout';
 
 // Components
 @import 'components/buttons';
+@import 'components/badges';
+@import 'components/doodles';
 @import 'components/header';
 @import 'components/mobile-menu';
 @import 'components/hero';
@@ -12,6 +15,7 @@
 @import 'components/about';
 @import 'components/timeline';
 @import 'components/portfolio';
+@import 'components/blog';
 @import 'components/contact';
 @import 'components/footer';
 

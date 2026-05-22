@@ -1,27 +1,37 @@
-<section id="portfolio" class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2>Selected work</h2>
-    </div>
-    <div class="portfolio-grid">
-      {{ range (where site.RegularPages "Section" "projects").ByWeight }}
-        <a href="{{ .RelPermalink }}" class="portfolio-card">
-          <div class="portfolio-card-image">
-            {{ with .Params.thumbnail }}
-              <img src="/images/projects/{{ . }}" alt="{{ $.Title }}">
-            {{ end }}
+<section class="portfolio-section">
+  <div class="wrapper">
+    <div class="container">
+      <div class="portfolio position-relative">
+        <div id="portfolio"></div>
+        <div class="position-relative">
+          <div class="headline-portfolio">
+            <div class="badge margin-bottom-30">
+              <div class="badge-text"><span class="shape-label"></span>My Works</div>
+            </div>
+            <h2 class="display-2">Each project is crafted with a focus on creating memorable and impactful experiences that connect with users.</h2>
           </div>
-          <div class="portfolio-card-content">
-            {{ with .Params.category }}
-              <div class="portfolio-card-category">{{ . }}</div>
-            {{ end }}
-            <h3 class="portfolio-card-title">{{ .Title }}</h3>
-            {{ with .Params.summary }}
-              <p class="portfolio-card-description">{{ . }}</p>
-            {{ end }}
-          </div>
-        </a>
-      {{ end }}
+          <img src="/images/doodles/doodle-scribble.svg" loading="lazy" alt="" class="doodle-scribble" style="position: absolute; top: 0; right: 5%;">
+          <img src="/images/doodles/doodle-shine-pink.svg" loading="lazy" alt="" class="doodle-shine-pink" style="position: absolute; top: 10%; right: 0;">
+        </div>
+        <div class="portfolio-grid">
+          {{ range (where site.RegularPages "Section" "projects").ByWeight }}
+            <div class="portfolio-item">
+              <a href="{{ .RelPermalink }}" class="image-link">
+                {{ with .Params.thumbnail }}
+                  <img loading="lazy" alt="{{ $.Title }}" src="/images/projects/{{ . }}" class="image-frame">
+                {{ end }}
+              </a>
+              <h3 class="post-title">{{ .Title }}</h3>
+              <p>{{ .Params.summary }}</p>
+              <a href="{{ .RelPermalink }}" class="btn-link">
+                <div>View Case Study</div>
+                <div>→</div>
+              </a>
+            </div>
+          {{ end }}
+        </div>
+        <img src="/images/doodles/doodle-clink.svg" loading="lazy" alt="" class="doodle-clink" style="position: absolute; bottom: 0; left: 3%;">
+      </div>
     </div>
   </div>
 </section>

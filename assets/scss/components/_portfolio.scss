@@ -1,62 +1,65 @@
+.portfolio-section {
+  position: relative;
+}
+
+.headline-portfolio {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
 .portfolio-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 
   @include respond-to(md) {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 90px;
   }
 }
 
-.portfolio-card {
-  display: block;
-  border-radius: $radius-lg;
-  overflow: hidden;
-  background-color: $off-white;
-  transition: transform $transition-fast, box-shadow $transition-fast;
+.portfolio-item {
+  .image-frame {
+    display: block;
+    width: 100%;
+    border: $border;
+    border-radius: $radius;
+    margin-bottom: 40px;
+    transition: opacity $transition-fast;
 
-  &:hover {
-    transform: translateY(-6px);
-    box-shadow: $shadow-lg;
-
-    .portfolio-card-image img {
-      transform: scale(1.03);
+    &:hover {
+      opacity: 0.9;
     }
   }
-}
 
-.portfolio-card-image {
-  overflow: hidden;
-  aspect-ratio: 16 / 10;
+  .post-title {
+    font-family: $font-heading;
+    font-size: $font-size-xl;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform $transition-base;
+  p {
+    margin-bottom: 20px;
+    line-height: 1.6;
   }
 }
 
-.portfolio-card-content {
-  padding: 24px;
+// Doodles
+.portfolio-section .doodle-scribble {
+  top: 5%;
+  right: 8%;
 }
 
-.portfolio-card-category {
-  font-size: 12px;
-  font-weight: $font-weight-semibold;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: $accent;
-  margin-bottom: 8px;
+.portfolio-section .doodle-shine-pink {
+  top: 3%;
+  right: 3%;
 }
 
-.portfolio-card-title {
-  font-size: $font-size-xl;
-  font-weight: $font-weight-semibold;
-}
-
-.portfolio-card-description {
-  font-size: $font-size-sm;
-  color: $gray;
-  margin-top: 8px;
+.portfolio-section .doodle-clink {
+  bottom: 5%;
+  left: 5%;
 }

@@ -1,47 +1,76 @@
-.services {
-  background-color: $off-white;
-}
-
-.service-card {
-  background-color: $white;
-  border-radius: $radius-lg;
-  padding: 32px;
-  transition: transform $transition-fast, box-shadow $transition-fast;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: $shadow-lg;
+.services-section {
+  .wrapper {
+    border-bottom: $border;
   }
 }
 
-.service-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: $radius-md;
+.headline-services {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.services-grid {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+  flex-direction: column;
+  gap: 40px;
+
+  @include respond-to(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+}
+
+.card {
+  border: $border;
+  border-radius: $radius;
+  padding: 40px;
+
+  &.background-purple { background-color: $purple; }
+  &.background-green { background-color: $green; }
+  &.background-red { background-color: $red; }
+  &.background-pink { background-color: $pink; }
+  &.background-blue { background-color: $blue; }
+  &.background-orange { background-color: $orange; }
+}
+
+.service {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.service .icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
 
   img {
-    width: 24px;
-    height: 24px;
+    width: 100%;
+    height: 100%;
   }
-
-  &.color-purple { background-color: rgba($purple, 0.12); color: $purple; }
-  &.color-pink { background-color: rgba($pink, 0.12); color: $pink; }
-  &.color-green { background-color: rgba($green, 0.12); color: $green; }
-  &.color-blue { background-color: rgba($blue, 0.12); color: $blue; }
 }
 
-.service-title {
+.service h3 {
   font-size: $font-size-xl;
-  font-weight: $font-weight-semibold;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-.service-description {
-  color: $gray;
-  font-size: $font-size-sm;
+.service p,
+.service div:not(.icon) > div {
+  font-size: $font-size-base;
   line-height: 1.6;
+  color: $dark;
+}
+
+// Doodles around services
+.services-section .doodle-flash {
+  top: 40%;
+  right: 5%;
+}
+
+.services-section .doodle-shine-purple {
+  width: 20px;
+  height: 20px;
 }

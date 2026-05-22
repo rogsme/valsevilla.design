@@ -1,79 +1,77 @@
-.contact {
-  background-color: $dark;
-  color: $white;
+.contact-section {
+  padding-bottom: 0;
 }
 
-.contact-grid {
+.contact-card {
+  background-color: $white;
+  border: $border;
+  border-radius: $radius;
+  padding: 40px 20px;
+  margin-bottom: 120px;
+  position: relative;
+
+  @include respond-to(md) {
+    padding: 70px 100px;
+  }
+}
+
+.headline-contact {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px;
+
+  h2 {
+    font-size: 28px;
+    line-height: 1.3;
+
+    @include respond-to(md) {
+      font-size: 36px;
+    }
+  }
+}
+
+.form-fields-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 48px;
+  gap: 20px;
 
   @include respond-to(md) {
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
   }
 }
 
-.contact-info {
-  h2 {
-    color: $white;
-    margin-bottom: 16px;
-  }
-
-  p {
-    color: rgba($white, 0.7);
-    font-size: $font-size-lg;
-  }
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-
-  label {
-    font-size: $font-size-sm;
-    font-weight: $font-weight-medium;
-    color: rgba($white, 0.8);
-  }
-
-  input,
-  textarea {
-    padding: 14px 16px;
-    background-color: rgba($white, 0.08);
-    border: 1px solid rgba($white, 0.15);
-    border-radius: $radius-sm;
-    color: $white;
-    font-size: $font-size-base;
-    transition: border-color $transition-fast;
-
-    &::placeholder {
-      color: rgba($white, 0.35);
-    }
-
-    &:focus {
-      outline: none;
-      border-color: $accent;
-    }
-  }
-
-  textarea {
-    min-height: 140px;
-    resize: vertical;
-  }
-}
-
-.contact .btn-accent {
-  width: 100%;
-  justify-content: center;
-
+.form-field-full {
   @include respond-to(md) {
-    width: auto;
+    grid-column: 1 / -1;
   }
+}
+
+.text-field {
+  width: 100%;
+  border: none;
+  border-bottom: $border;
+  background-color: transparent;
+  color: $dark;
+  min-height: 54px;
+  padding: 10px 0;
+  font-size: $font-size-lg;
+
+  &::placeholder {
+    color: $dark;
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom-color: $primary;
+  }
+}
+
+textarea.text-field {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-submit {
+  text-align: center;
+  margin-top: 40px;
 }

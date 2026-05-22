@@ -1,48 +1,73 @@
-.btn {
+.btn-3d {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-front {
+  position: relative;
+  z-index: 1;
+  border: $border;
+  background-color: $white;
+  color: $dark;
+  border-radius: $radius;
+  font-family: $font-heading;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 14px 28px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 14px 28px;
-  border-radius: $radius-full;
-  font-weight: $font-weight-semibold;
-  font-size: $font-size-base;
-  transition: transform $transition-fast, box-shadow $transition-fast;
+  gap: 10px;
+  transition: transform $transition-fast;
+}
 
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: $shadow-md;
+.btn-edge {
+  position: absolute;
+  z-index: 0;
+  border: $border;
+  background-color: $purple;
+  border-radius: $radius;
+  width: 100%;
+  height: 100%;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+}
+
+.btn-3d:hover .btn-front {
+  transform: translateY(2px);
+}
+
+.btn-3d:hover .btn-edge {
+  bottom: -4px;
+}
+
+.btn-social {
+  position: relative;
+  display: inline-block;
+
+  .btn-front {
+    padding: 10px 12px;
+    font-size: 16px;
   }
 
-  &:active {
-    transform: translateY(0);
+  .btn-edge {
+    bottom: -5px;
   }
 }
 
-.btn-primary {
-  background-color: $dark;
-  color: $white;
-
-  &:hover {
-    background-color: lighten($dark, 8%);
-  }
-}
-
-.btn-outline {
-  background-color: transparent;
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: $font-heading;
+  font-weight: 700;
   color: $dark;
-  border: 2px solid $dark;
+  text-decoration: none;
+  transition: color $transition-fast;
 
   &:hover {
-    background-color: $dark;
-    color: $white;
-  }
-}
-
-.btn-accent {
-  background-color: $accent;
-  color: $white;
-
-  &:hover {
-    background-color: darken($accent, 8%);
+    color: $primary;
   }
 }

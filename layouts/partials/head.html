@@ -5,28 +5,24 @@
   <meta name="description" content="{{ .Params.description | default site.Params.description }}">
   <meta name="author" content="{{ site.Params.author }}">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="{{ .Title }}">
   <meta property="og:description" content="{{ .Params.description | default site.Params.description }}">
   <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
   <meta property="og:url" content="{{ .Permalink }}">
   {{ with site.Params.meta.ogImage }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ .Title }}">
-  <meta name="twitter:description" content="{{ .Params.description | default site.Params.description }}">
 
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <link rel="apple-touch-icon" href="/images/webclip.png">
 
-  <!-- Google Fonts: DM Sans -->
+  <!-- Google Fonts: DM Sans for body -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
+  <!-- Styles (Cabinet Grotesk self-hosted via @font-face in SCSS) -->
   {{ $style := resources.Get "scss/style.scss" | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" false) }}
   <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">
 </head>

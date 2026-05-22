@@ -1,17 +1,29 @@
-<section id="home" class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span>👋</span>
-          <span>{{ site.Params.hero.greeting }}</span>
+<section id="home" class="hero-section">
+  <div class="wrapper background-purple border-bottom overflow-hidden">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-image-wrapper position-relative">
+          <img src="/images/hero.png" loading="lazy" alt="{{ site.Params.author }}" width="327" class="hero-image">
+          <div class="star-badge">
+            <div class="label cc-rotate">Let's create amazing experiences</div>
+          </div>
+          <img src="/images/doodles/doodle-shine.svg" loading="lazy" alt="" class="doodle-shine">
+          <img src="/images/doodles/doodle-breeze.svg" loading="lazy" alt="" class="doodle-breeze">
         </div>
-        <h1 class="hero-heading">{{ site.Params.hero.heading }}</h1>
-        <p class="hero-description">{{ site.Params.hero.subheading }}</p>
-        <a href="{{ site.Params.hero.ctaLink }}" class="btn btn-primary">{{ site.Params.hero.ctaText }}</a>
-      </div>
-      <div class="hero-image">
-        <img src="/images/hero.png" alt="{{ site.Params.author }}">
+        <div class="hero-content">
+          <div class="badge margin-bottom-30">
+            <div class="badge-text"><span class="shape-label"></span>Heeyyy!</div>
+          </div>
+          <h1 class="display-1 margin-bottom-15">I'm Valentina Sevilla, <span class="underline">product</span> designer.</h1>
+          <div class="paragraph-large margin-bottom-45">I'm passionate about creating experiences that truly resonate with people.</div>
+          <a href="#portfolio" class="btn-3d">
+            <div class="btn-front">
+              <div>See My Works</div>
+              <div>↓</div>
+            </div>
+            <div class="btn-edge"></div>
+          </a>
+        </div>
       </div>
     </div>
   </div>

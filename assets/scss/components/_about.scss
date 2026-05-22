@@ -1,3 +1,10 @@
+.about-section {
+  .wrapper {
+    background-color: $purple;
+    border-bottom: $border;
+  }
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -5,36 +12,66 @@
 
   @include respond-to(md) {
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 60px;
+    align-items: start;
   }
 }
 
-.about-content {
-  p {
-    color: $gray-dark;
-    font-size: $font-size-lg;
-    line-height: 1.7;
+.about-image-col {
+  position: relative;
+
+  @include respond-to(md) {
+    order: 1;
   }
 }
 
 .about-image {
-  position: relative;
+  width: 100%;
+  max-width: 580px;
+  border-radius: $radius;
+  border: $border;
+}
 
-  img {
-    width: 100%;
-    border-radius: $radius-lg;
+.about-image-col .star-badge-blue {
+  top: -15px;
+  right: -15px;
+  width: 100px;
+  height: 100px;
+
+  @include respond-to(md) {
+    top: -20px;
+    right: -20px;
+    width: 110px;
+    height: 110px;
   }
 }
 
-.experience-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  background-color: $accent;
-  color: $white;
-  border-radius: $radius-full;
-  font-size: $font-size-sm;
-  font-weight: $font-weight-semibold;
-  margin-top: 24px;
+.about-image-col .doodle-wave {
+  bottom: 10%;
+  left: -30px;
+}
+
+.about-text-col {
+  @include respond-to(md) {
+    order: 2;
+  }
+
+  .paragraph-large {
+    margin-bottom: 25px;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+}
+
+.about-text-col .doodle-heart {
+  &:first-of-type {
+    top: 40%;
+    right: -15px;
+  }
+  &:last-of-type {
+    bottom: 10%;
+    right: 10%;
+  }
 }
