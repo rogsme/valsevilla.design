@@ -1,11 +1,21 @@
 .portfolio-section {
   position: relative;
+  font-size: 18px;
+
+  .container {
+    max-width: 1350px;
+    padding: 0 50px;
+  }
+
+  .wrapper {
+    padding-bottom: 130px;
+  }
 }
 
 .headline-portfolio {
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto 60px;
+  max-width: 700px;
+  margin: 0 auto 55px;
 }
 
 .portfolio-grid {
@@ -22,12 +32,16 @@
 }
 
 .portfolio-item {
+  .image-link {
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+
   .image-frame {
     display: block;
     width: 100%;
     border: $border;
     border-radius: $radius;
-    margin-bottom: 40px;
     transition: opacity $transition-fast;
 
     &:hover {
@@ -40,23 +54,26 @@
     font-size: $font-size-xl;
     font-weight: 700;
     margin-bottom: 10px;
+    line-height: 1.4;
   }
 
   p {
     margin-bottom: 20px;
-    line-height: 1.6;
+    line-height: 1.33;
   }
 }
 
 // Doodles
 .portfolio-section .doodle-scribble {
-  top: 5%;
-  right: 8%;
+  position: absolute;
+  top: 45px;
+  left: -40px;
 }
 
 .portfolio-section .doodle-shine-pink {
-  top: 3%;
-  right: 3%;
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
 
 .portfolio-section .doodle-clink {
