@@ -2,6 +2,10 @@
   .wrapper {
     background-color: $purple;
     border-bottom: $border;
+
+    @include respond-to(md) {
+      padding: 140px 0 27px;
+    }
   }
 }
 
@@ -12,8 +16,9 @@
 
   @include respond-to(md) {
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 90px;
     align-items: start;
+    margin-bottom: 100px;
   }
 }
 
@@ -28,7 +33,7 @@
 .about-image {
   width: 100%;
   max-width: 580px;
-  border-radius: $radius;
+  border-radius: 50%;
   border: $border;
 }
 
@@ -44,8 +49,10 @@
 }
 
 .about-image-col .doodle-wave {
-  bottom: 10%;
-  left: -30px;
+  width: 134px;
+  height: 97px;
+  bottom: 190px;
+  left: -60px;
 }
 
 .about-text-col {
@@ -53,11 +60,26 @@
     order: 2;
   }
 
+  .doodle-heart {
+    width: 77px;
+    height: 69px;
+  }
+
+  .display-2 {
+    margin-bottom: 15px;
+  }
+
   .paragraph-large {
     margin-bottom: 25px;
   }
 
   p {
+    font-size: $font-size-lg;
     line-height: 1.7;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
