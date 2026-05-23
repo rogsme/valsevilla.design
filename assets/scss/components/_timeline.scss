@@ -36,14 +36,16 @@
 
 .timeline-info {
   flex: none;
-  min-width: 160px;
+  width: 180px;
+  text-align: right;
 
   .label {
     font-size: $font-size-base;
   }
 
   @include respond-below(md) {
-    min-width: auto;
+    width: auto;
+    text-align: left;
   }
 }
 
