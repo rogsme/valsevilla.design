@@ -15,7 +15,6 @@ enableRobotsTXT = true
   tagline = "UX / Product Designer"
   email = "hello@valsevilla.design"
   resumeUrl = "/images/cv-val-sevilla.pdf"
-  blogUrl = "https://bootcamp.uxdesign.cc/how-i-landed-my-first-ux-design-job-as-a-self-taught-designer-e9ccc35aaad"
   formspreeEndpoint = "https://formspree.io/f/PLACEHOLDER"
 
   [params.hero]
@@ -50,10 +49,8 @@ enableRobotsTXT = true
 
 [[menus.main]]
   name = "Blog"
-  url = "https://bootcamp.uxdesign.cc/how-i-landed-my-first-ux-design-job-as-a-self-taught-designer-e9ccc35aaad"
+  url = "/#blog"
   weight = 4
-  [menus.main.params]
-    external = true
 
 [[menus.main]]
   name = "Contact"

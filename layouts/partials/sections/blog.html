@@ -1,12 +1,18 @@
 <section class="blog-section">
   <div class="container">
+    <div id="blog"></div>
     <div class="headline-blog">
       <div class="badge margin-bottom-30">
         <div class="badge-text"><span class="shape-label"></span>My Blogs</div>
       </div>
     </div>
-    <a href="{{ site.Params.blogUrl }}" target="_blank" class="blog-link">
-      <strong>(1/3) The art linked to design ↗</strong>
-    </a>
+    <div class="blog-list">
+      {{ range (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+        <a href="{{ .RelPermalink }}" class="blog-list-item">
+          <span class="blog-list-title">{{ .Title }}</span>
+          <span class="blog-list-date">{{ .Date.Format "Jan 2006" }}</span>
+        </a>
+      {{ end }}
+    </div>
   </div>
 </section>
