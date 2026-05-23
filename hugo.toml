@@ -15,7 +15,7 @@ enableRobotsTXT = true
   tagline = "UX / Product Designer"
   email = "hello@valsevilla.design"
   resumeUrl = "/images/cv-val-sevilla.pdf"
-  formspreeEndpoint = "https://formspree.io/f/PLACEHOLDER"
+  formSubmitEndpoint = "https://formsubmit.co/deryssevilla@gmail.com"
 
   [params.hero]
     greeting = "Hello! I'm Val"

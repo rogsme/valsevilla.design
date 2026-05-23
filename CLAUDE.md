@@ -70,4 +70,4 @@ Import order: `_variables` → `_fonts` → `_reset` → `_typography` → `_lay
 - Spacing utilities: `.margin-bottom-{15,20,25,30,35,45}`, `.margin-bottom-none`
 - Image paths are absolute from root: `/images/projects/`, `/images/doodles/`, `/images/social/`
 - Social icons are SVGs at `static/images/social/{name}.svg`
-- Contact form uses Formspree (`formspreeEndpoint` param in hugo.toml — currently placeholder)
+- Contact form uses Formsubmit.co (`formSubmitEndpoint` param in hugo.toml)
