@@ -1,33 +1,57 @@
 ---
 title: "Steam"
-description: "A redesign concept for the Steam gaming platform focusing on improved discovery and social features"
-date: 2023-11-01
-category: "Web Platform"
+description: "Steam is an online platform from game developer Valve where you can buy, play, create, and discuss PC games."
+date: 2021-04-01
+category: "UI/UX"
 summary: "Steam is an online platform from game developer Valve where you can buy, play, create, and discuss PC games."
 thumbnail: "steam-thumb.png"
 weight: 2
+about: "Steam is an online platform from game developer Valve where you can buy, play, create, and discuss PC games. The platform hosts thousands of games (as well as downloadable content, or DLC, and user-generated features called \"mods\") from major developers and indie game designers alike."
+project_date: "April 2021"
+client: "Steam"
+services: "UI/UX"
+prototype_url: "https://xd.adobe.com/view/b894734e-c3c9-402b-b6b1-794a7b46a7cb-edc7/?fullscreen&hints=off"
+hero_image: "steam/main-image.png"
+hero_color: "#aeaeff"
 ---
 
-## Overview
+## Elevator pitch
 
-A comprehensive redesign concept for Valve's Steam platform, focusing on improving game discovery, social interactions, and the overall browsing experience for gamers.
+{{< youtube-embed "HDL2dlnMd4s" >}}
 
-## The Challenge
+> In the realm of gaming, user experience is the driving force behind innovation, shaping a platform that combines trustworthiness, intuitive navigation, and visually captivating gaming adventures.
 
-Steam's interface has grown complex over the years, making it difficult for users to discover new games that match their interests. The social features also felt disconnected from the main shopping experience.
+![Personas](/images/projects/steam/1-personas.png)
 
-## My Role
+![Research](/images/projects/steam/2-research.png)
 
-I led the complete UX/UI redesign as a concept project, conducting competitive analysis, creating user flows, and designing the full interface system.
+## I definitively found some pain points
 
-## The Process
+In order to find all the pain points I made:
 
-- Analyzed user feedback and pain points from gaming communities
-- Performed competitive analysis of Epic Games Store, GOG, and other platforms
-- Created information architecture and navigation redesign
-- Designed a component-based design system
-- Prototyped key user flows for testing
+- Digital surveys
+- App store reviews
+- Usability interviews
+- Trends analysis
 
-## The Solution
+![Wireframes](/images/projects/steam/3-wireframes.png)
 
-A modernized interface that surfaces personalized recommendations, integrates social features directly into the browsing experience, and simplifies the purchase flow while maintaining the depth that power users expect.
+## Our goals
+
+Thanks to the pain points I find, I was able to define the principal objectives and goals to solve these problems
+
+![Design](/images/projects/steam/4-design.png)
+
+![Screens](/images/projects/steam/5-screens.png)
+
+![Components](/images/projects/steam/6-components.png)
+
+## Heuristics
+
+![Prototype](/images/projects/steam/7-prototype.png)
+
+## UX laws check
+
+![Testing](/images/projects/steam/8-testing.png)
+
+![Final](/images/projects/steam/9-final.png)
