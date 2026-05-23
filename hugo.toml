@@ -33,23 +33,23 @@ enableRobotsTXT = true
     ogDescription = "Val Sevilla - Product Designer specializing in user experience and digital design"
 
 [[menus.main]]
+  name = "Home"
+  url = "/#home"
+  weight = 1
+
+[[menus.main]]
   name = "Services"
   url = "/#services"
-  weight = 1
+  weight = 2
 
 [[menus.main]]
   name = "About"
   url = "/#about"
-  weight = 2
+  weight = 3
 
 [[menus.main]]
   name = "Portfolio"
   url = "/#portfolio"
-  weight = 3
-
-[[menus.main]]
-  name = "Blog"
-  url = "/#blog"
   weight = 4
 
 [[menus.main]]
