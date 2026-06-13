@@ -1,0 +1,14 @@
+{{- $alt := .Text -}}
+{{- $src := .Destination -}}
+{{- if eq .Page.Section "blog" -}}
+  <figure class="polaroid">
+    <div class="clip"></div>
+    <img class="pic" src="{{ $src }}" alt="{{ $alt }}" loading="lazy">
+    {{- with .Title }}<figcaption class="cap">{{ . }}</figcaption>{{ end -}}
+  </figure>
+{{- else -}}
+  <figure class="content-shot">
+    <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy">
+    {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end -}}
+  </figure>
+{{- end -}}

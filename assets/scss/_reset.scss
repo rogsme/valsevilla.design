@@ -14,11 +14,13 @@ html {
 
 body {
   min-height: 100vh;
-  line-height: $line-height-base;
-  font-family: $font-family;
-  font-size: $font-size-base;
-  color: $dark;
-  background-color: $white;
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--cream);
+  overflow-x: hidden;
+  cursor: $cursor-default;
 }
 
 img,
@@ -50,4 +52,25 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+// Custom pointer cursor on interactive elements
+a,
+button,
+.btn,
+.card,
+.note,
+.role,
+.pill,
+.tab,
+.socials a,
+.nav-link,
+.nav-links a,
+.hamburger,
+.back {
+  cursor: $cursor-pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }

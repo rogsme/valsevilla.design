@@ -1,69 +1,70 @@
-.contact-section {
-  padding-bottom: 0;
-}
+.cta {
+  background: var(--ink);
+  color: var(--cream);
+  text-align: center;
+  padding: 96px 0 70px;
+  border-top: 2px solid var(--ink);
 
-.contact-card {
-  background-color: $white;
-  border: $border;
-  border-radius: $radius;
-  padding: 40px 20px;
-  margin-bottom: 120px;
-  position: relative;
+  h2 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(2.2rem, 6.5vw, 4.6rem);
+    letter-spacing: -.04em;
+    line-height: .98;
+    max-width: 18ch;
+    margin: 0 auto;
+    color: var(--cream);
 
-  @include respond-to(md) {
-    padding: 70px 100px;
+    em { font-family: var(--scrawl); font-style: normal; color: var(--sun); }
+  }
+
+  p {
+    color: #b8b0a6;
+    max-width: 440px;
+    margin: 22px auto 30px;
+    font-size: 1.1rem;
   }
 }
 
-.headline-contact {
-  text-align: center;
-  max-width: 500px;
-  margin: 0 auto 50px;
-}
+// Contact form (homepage CTA)
+.contact-form {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: left;
 
-.form-fields-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-
-  @include respond-to(md) {
+  .form-fields-grid {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-}
-
-.form-field-full {
-  @include respond-to(md) {
-    grid-column: 1 / -1;
-  }
-}
-
-.text-field {
-  width: 100%;
-  border: none;
-  border-bottom: $border;
-  background-color: transparent;
-  color: $dark;
-  min-height: 54px;
-  padding: 10px 0;
-  font-size: 18px;
-
-  &::placeholder {
-    color: $dark;
+    gap: 16px;
+    margin-bottom: 22px;
   }
 
-  &:focus {
-    outline: none;
-    border-bottom-color: $primary;
+  .text-field {
+    width: 100%;
+    background: rgba(255, 255, 255, .06);
+    border: 2px solid #3a342e;
+    border-radius: 16px;
+    padding: 15px 18px;
+    color: var(--cream);
+    font-family: var(--body);
+    font-size: 1rem;
+    transition: border-color .15s, background .15s;
+
+    &::placeholder { color: #8d857b; }
+
+    &:focus {
+      outline: none;
+      border-color: var(--sun);
+      background: rgba(255, 255, 255, .1);
+    }
   }
+
+  textarea.text-field { min-height: 130px; resize: vertical; }
+  .form-field-full { grid-column: 1 / -1; }
+
+  .btn { margin-top: 4px; }
 }
 
-textarea.text-field {
-  min-height: 150px;
-  padding: 0 0 20px;
-  resize: vertical;
-}
-
-.contact-submit {
-  text-align: center;
-  margin-top: 40px;
+@media (max-width: 680px) {
+  .contact-form .form-fields-grid { grid-template-columns: 1fr; }
 }

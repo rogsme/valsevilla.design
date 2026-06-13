@@ -9,6 +9,19 @@ weight: 5
 project_date: "May 2024"
 client: "Revolear"
 services: "UI/UX"
+role: "Product Designer"
+tools: "Figma"
+team: "Design team"
+tags: ["SaaS", "AI", "UX/UI"]
+process:
+  - title: "Process Mapping"
+    description: "Merging discovery, solution mapping and strategy into one streamlined flow for sales teams."
+  - title: "System Design"
+    description: "Building a scalable, card-based component system that balances usability with flexibility."
+  - title: "Interactive Proposals"
+    description: "Shaping the AI-assisted experience that turns static documents into tailored, interactive presentations."
+  - title: "Navigation & Flow"
+    description: "Clarifying paths between discovery, solution and proposal stages so users always know where they are."
 hero_image: "revolear/main-image.webp"
 hero_color: "#f5f5ff"
 ---

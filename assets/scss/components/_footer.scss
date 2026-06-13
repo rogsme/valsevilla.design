@@ -1,40 +1,42 @@
 .site-footer {
-  background-color: $purple;
-  padding: 40px 0;
-  position: relative;
+  background: var(--ink);
+  color: #8d857b;
+  padding: 0 0 40px;
 }
 
-.footer-row {
+.footer-bottom {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding-top: 26px;
+  border-top: 1px solid #3a342e;
+  color: #8d857b;
+  font-size: .9rem;
+}
 
-  @include respond-to(md) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.socials {
+  display: flex;
+  gap: 10px;
+
+  a {
+    padding: 0 14px;
+    height: 40px;
+    border: 2px solid #3a342e;
+    border-radius: 30px;
+    display: grid;
+    place-items: center;
+    transition: .15s;
+    color: var(--cream);
+    font-weight: 600;
+    font-size: .85rem;
+
+    &:hover {
+      background: var(--pink);
+      border-color: var(--pink);
+      color: var(--ink);
+      transform: translateY(-3px);
+    }
   }
-}
-
-.footer-copy {
-  color: $dark;
-  font-size: $font-size-sm;
-}
-
-.footer-social {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-// Doodles in footer
-.site-footer .doodle-cloud {
-  top: -20px;
-  right: 10%;
-}
-
-.site-footer .doodle-envelope {
-  bottom: 10px;
-  left: 5%;
 }

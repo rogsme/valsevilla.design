@@ -1,0 +1,28 @@
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="kicker">my works ✦</span><h2>Crafted with care.</h2></div>
+      <p>Each project is built around creating memorable, impactful experiences that connect with users.</p>
+    </div>
+    <div class="grid">
+      {{ $colors := slice "c-pink" "c-lime" "c-lilac" "c-sky" }}
+      {{ range $i, $p := (where site.RegularPages "Section" "projects").ByWeight }}
+        <a class="card {{ index $colors (mod $i 4) }} reveal" href="{{ $p.RelPermalink }}">
+          <div>
+            <div class="top"><h3>{{ $p.Title }}</h3><span class="num">[{{ printf "%02d" (add $i 1) }}]</span></div>
+            <p class="desc">{{ $p.Params.summary }}</p>
+            <div class="tags">
+              {{ $tags := $p.Params.tags }}
+              {{ if not $tags }}{{ $tags = slice $p.Params.category }}{{ end }}
+              {{ range $tags }}<span class="tag">{{ . }}</span>{{ end }}
+            </div>
+          </div>
+          {{ with $p.Params.thumbnail }}
+            <div class="card-thumb"><img loading="lazy" alt="{{ $p.Title }}" src="/images/projects/{{ . }}"></div>
+          {{ end }}
+          <div class="card-bottom"><span class="card-cta">View case study</span><span class="arrow">↗</span></div>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</section>

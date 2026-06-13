@@ -1,58 +1,44 @@
-// Colors — Webflow pastel palette
-$purple: #d8b3f4;
-$pink: #fdcbf5;
-$green: #d1f3a3;
-$red: #ffa3a3;
-$blue: #c9e3fa;
-$orange: #ffc669;
-$yellow: #ffe49f;
+// ── Design tokens — "sticker / paper-desk" redesign ──
+// Exposed as CSS custom properties (used throughout) + SCSS vars where handy.
 
-$white: #ffffff;
-$off-white: #f0f0f8;
-$dark: #1d1d1d;
-$primary: #7575c8;
+:root {
+  --cream: #ECE8FA;
+  --paper: #FCFBFF;
+  --ink: #241D36;
+  --ink-soft: #5d5573;
+  --pink: #F368A8;
+  --lime: #9FE0AE;
+  --lilac: #C4B2F2;
+  --sky: #A4D6FF;
+  --tangerine: #FF8A5C;
+  --sun: #FFD56B;
+  --pine: #2F9E7E;
+  --accent: #7A5AF0;
+  --line: #e2dcf2;
 
-// Typography
-$font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-$font-heading: 'Cabinet Grotesk', $font-family;
+  --shadow: 14px 14px 0 rgba(36, 29, 54, 1);
+  --shadow-sm: 6px 6px 0 rgba(36, 29, 54, 1);
 
-$font-size-base: 16px;
-$font-size-sm: 14px;
-$font-size-lg: 18px;
-$font-size-xl: 24px;
-$font-size-2xl: 32px;
-$font-size-3xl: 40px;
-$font-size-4xl: 50px;
-$font-size-5xl: 70px;
+  --display: "Bricolage Grotesque", sans-serif;
+  --body: "Hanken Grotesk", sans-serif;
+  --hand: "Shantell Sans", cursive;
+  --scrawl: "Caveat", cursive;
 
-$line-height-base: 1.6;
-$line-height-heading: 1.15;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
 
-// Breakpoints
+// SCSS-side mirrors for occasional use
+$ink: #241D36;
+
+// Breakpoints (the redesign is desktop-first; these match the reference queries)
 $bp-sm: 576px;
 $bp-md: 768px;
 $bp-lg: 1024px;
 $bp-xl: 1280px;
 
-// Layout
-$container-max: 1200px;
-$container-padding: 24px;
-$section-padding-y: 100px;
-$section-padding-y-mobile: 60px;
-
-// Borders — distinctive Webflow style
-$border: 2px solid $dark;
-$radius: 10px;
-$radius-badge: 20px;
-$radius-full: 9999px;
-
-// Shadows
-$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-// Transitions
-$transition-fast: 0.2s ease;
-$transition-base: 0.3s ease;
+// Custom arrow cursor (kept per design decision) — encoded SVG data-URI
+$cursor-default: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2230%22%20viewBox%3D%220%200%2024%2030%22%3E%3Cpath%20d%3D%22M4%203%20L4%2025%20L10%2019%20L14%2028%20L18%2026%20L14%2018%20L21%2018%20Z%22%20fill%3D%22%23fff%22%20stroke%3D%22%23fff%22%20stroke-width%3D%224.5%22%20stroke-linejoin%3D%22round%22/%3E%3Cpath%20d%3D%22M4%203%20L4%2025%20L10%2019%20L14%2028%20L18%2026%20L14%2018%20L21%2018%20Z%22%20fill%3D%22%23fff%22%20stroke%3D%22%23241D36%22%20stroke-width%3D%222.2%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E') 4 3, auto;
+$cursor-pointer: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2230%22%20viewBox%3D%220%200%2024%2030%22%3E%3Cpath%20d%3D%22M4%203%20L4%2025%20L10%2019%20L14%2028%20L18%2026%20L14%2018%20L21%2018%20Z%22%20fill%3D%22%23fff%22%20stroke%3D%22%23fff%22%20stroke-width%3D%224.5%22%20stroke-linejoin%3D%22round%22/%3E%3Cpath%20d%3D%22M4%203%20L4%2025%20L10%2019%20L14%2028%20L18%2026%20L14%2018%20L21%2018%20Z%22%20fill%3D%22%23fff%22%20stroke%3D%22%23241D36%22%20stroke-width%3D%222.2%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E') 4 3, pointer;
 
 // Mixins
 @mixin respond-to($bp) {
@@ -62,7 +48,7 @@ $transition-base: 0.3s ease;
   @if $bp == xl { @media (min-width: $bp-xl) { @content; } }
 }
 
-@mixin respond-below($bp) {
-  @if $bp == md { @media (max-width: ($bp-md - 1)) { @content; } }
-  @if $bp == lg { @media (max-width: ($bp-lg - 1)) { @content; } }
+// Desktop-first helpers matching the reference breakpoints
+@mixin respond-max($px) {
+  @media (max-width: $px) { @content; }
 }

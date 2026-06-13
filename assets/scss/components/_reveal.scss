@@ -1,0 +1,33 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(38px);
+  transition: opacity .9s var(--ease), transform .9s var(--ease), filter .9s var(--ease);
+  will-change: opacity, transform;
+
+  &[data-anim="blur"] { filter: blur(12px); }
+  &[data-anim="left"] { transform: translateX(-44px); }
+  &[data-anim="scale"] { transform: scale(.9); }
+
+  &.in {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
+
+// Dot / background colour helpers (map data colours to the new palette)
+.background-pink, .background-red { background: var(--pink); }
+.background-lime, .background-green { background: var(--lime); }
+.background-sky, .background-blue { background: var(--sky); }
+.background-lilac, .background-purple { background: var(--lilac); }
+.background-tangerine, .background-orange { background: var(--tangerine); }
+.background-sun, .background-yellow { background: var(--sun); }

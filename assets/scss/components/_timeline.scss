@@ -1,93 +1,79 @@
-.experience-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-
-  @include respond-to(md) {
-    grid-template-columns: 5fr 6fr;
-    gap: 90px;
-  }
+.exp {
+  padding: 30px 0 80px;
 }
 
-.experience-intro {
-  .display-3 {
-    margin-bottom: 15px;
-  }
+.exp-head {
+  text-align: center;
+  margin-bottom: 38px;
 
-  .paragraph-large {
-    margin-bottom: 35px;
+  .kicker { color: var(--accent); }
+
+  h2 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+    letter-spacing: -.03em;
   }
 }
 
 .timeline {
-  // container for timeline items
-}
-
-.timeline-item {
+  max-width: 760px;
+  margin: 0 auto;
   display: flex;
-  gap: 25px;
+  flex-direction: column;
+  gap: 16px;
+}
 
-  @include respond-below(md) {
-    flex-direction: column;
-    padding-left: 25px;
-    position: relative;
+.role {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  border: 2.5px solid var(--ink);
+  border-radius: 20px;
+  padding: 20px 24px;
+  background: var(--paper);
+  box-shadow: var(--shadow-sm);
+  transition: transform .15s;
+
+  &:hover { transform: translateX(4px); }
+
+  .when {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: .85rem;
+    color: var(--ink-soft);
+    min-width: 130px;
+    padding-top: 3px;
+  }
+
+  .what {
+    h4 {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 1.18rem;
+      letter-spacing: -.01em;
+      margin-bottom: 5px;
+    }
+
+    p { font-size: .95rem; color: var(--ink-soft); max-width: 55ch; }
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--ink);
+    flex: none;
+    margin-top: 6px;
   }
 }
 
-.timeline-info {
-  flex: none;
-  width: 180px;
-  text-align: right;
-
-  .label {
-    font-size: $font-size-base;
-  }
-
-  @include respond-below(md) {
-    width: auto;
-    text-align: left;
-  }
+.resume-row {
+  text-align: center;
+  margin-top: 34px;
 }
 
-.timeline-marker {
-  border-left: $border;
-  position: relative;
-
-  @include respond-below(md) {
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-  }
-}
-
-.timeline-dot {
-  width: 20px;
-  height: 20px;
-  border: $border;
-  border-radius: 50%;
-  position: absolute;
-  left: -11px;
-  top: 0;
-
-  &.background-purple { background-color: $purple; }
-  &.background-pink { background-color: $pink; }
-  &.background-green { background-color: $green; }
-  &.background-blue { background-color: $blue; }
-  &.background-red { background-color: $red; }
-}
-
-.timeline-content {
-  margin-top: -6px;
-
-  h3 {
-    font-size: $font-size-xl;
-    margin-bottom: 10px;
-  }
-
-  p {
-    font-size: $font-size-lg;
-    line-height: 1.7;
-    margin-bottom: 35px;
-  }
+@media (max-width: 680px) {
+  .role { flex-direction: column; gap: 8px; }
+  .role .when { min-width: 0; }
 }

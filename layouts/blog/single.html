@@ -1,25 +1,45 @@
 {{ define "body_classes" }}page-blog{{ end }}
 
 {{ define "main" }}
-  <article class="blog-post">
-    <div class="container">
-      <div class="blog-post-header">
-        <time class="blog-post-date" datetime="{{ .Date.Format "2006-01-02" }}">
-          {{ .Date.Format "January 2, 2006" }}
-        </time>
-        <h1 class="blog-post-title">{{ .Title }}</h1>
-      </div>
-      <div class="blog-post-content">
-        {{ .Content }}
-      </div>
-    </div>
-    <div class="container">
-      <nav class="blog-post-nav">
-        <a href="/#blog">&larr; All posts</a>
-        {{ with .NextInSection }}
-          <a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>
+  <div class="desk-page">
+    <div class="wrap"><a class="back" href="/#blog">← back to the desk</a></div>
+
+    <article class="sheet reveal">
+      <div class="tape tl"></div><div class="tape tr"></div>
+      <div class="margin-line"></div>
+      <span class="punch p1"></span><span class="punch p2"></span><span class="punch p3"></span>
+
+      <header class="post-head">
+        {{ with .Params.tags }}
+          <div class="tabs">{{ range . }}<span class="tab">{{ . }}</span>{{ end }}</div>
         {{ end }}
-      </nav>
-    </div>
-  </article>
+        <span class="date">{{ .Date.Format "Jan 2006" }}</span>
+        <span class="readtime">· {{ .ReadingTime }} min read</span>
+        <h1>{{ .Title }}</h1>
+      </header>
+
+      <div class="post-body">
+        {{ .Content }}
+        <span class="signoff">— Val ✦</span>
+      </div>
+    </article>
+
+    {{ $others := where (where site.RegularPages "Section" "blog") ".RelPermalink" "ne" .RelPermalink }}
+    {{ with $others.ByDate.Reverse }}
+      <section class="related reveal">
+        <h3>More from the desk →</h3>
+        <div class="rel-grid">
+          {{ range first 3 . }}
+            <a class="note" href="{{ .RelPermalink }}">
+              <div class="minitape"></div>
+              <span class="date">{{ .Date.Format "Jan 2006" }}</span>
+              <h4>{{ .Title }}</h4>
+            </a>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  </div>
+
+  {{ partial "cta.html" (dict "heading" "Liked this note? <em>Let's chat.</em>" "text" "I write when I'm figuring something out. Say hi if any of it resonates.") }}
 {{ end }}

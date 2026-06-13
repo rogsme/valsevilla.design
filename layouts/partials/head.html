@@ -17,12 +17,12 @@
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <link rel="apple-touch-icon" href="/images/webclip.png">
 
-  <!-- Google Fonts: DM Sans for body -->
+  <!-- Google Fonts: Bricolage Grotesque (display), Hanken Grotesk (body), Shantell Sans (hand), Caveat (scrawl) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700&family=Shantell+Sans:ital,wght@0,400;0,600;1,500&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Styles (Cabinet Grotesk self-hosted via @font-face in SCSS) -->
+  <!-- Styles -->
   {{ $style := resources.Get "scss/style.scss" | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" false) }}
   <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">
 </head>

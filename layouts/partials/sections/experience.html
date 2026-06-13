@@ -1,0 +1,20 @@
+<section class="exp" id="experience">
+  <div class="wrap">
+    <div class="exp-head reveal"><span class="kicker">where I've been</span><h2>My experience</h2></div>
+    <div class="timeline">
+      {{ range hugo.Data.timeline.entries }}
+        <div class="role reveal" data-anim="left">
+          <span class="dot background-{{ .dotColor }}"></span>
+          <span class="when">{{ .period }}</span>
+          <div class="what">
+            <h4>{{ .title }}</h4>
+            <p>{{ .description }}</p>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+    <div class="resume-row reveal">
+      <a class="btn sky" href="{{ site.Params.resumeUrl }}" target="_blank" rel="noopener">Download résumé ↓</a>
+    </div>
+  </div>
+</section>

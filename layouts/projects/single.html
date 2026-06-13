@@ -1,99 +1,116 @@
 {{ define "body_classes" }}page-project{{ end }}
 
 {{ define "main" }}
-  <section class="project-hero"{{ with .Params.hero_color }} style="background-color: {{ . }};"{{ end }}>
-    <div class="container">
-      <div class="project-hero-grid">
-        <div class="project-hero-left">
-          <h1 class="project-title">{{ .Title }}</h1>
-          {{ with .Params.summary }}
-            <p class="project-description">{{ . }}</p>
-          {{ end }}
-          {{ with .Params.prototype_url }}
-            <a href="{{ . }}" target="_blank" rel="noopener" class="btn-3d project-prototype-btn">
-              <div class="btn-front">
-                <div class="btn-text">
-                  Prototype
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </div>
-              </div>
-              <div class="btn-edge"></div>
-            </a>
-          {{ end }}
-        </div>
-        <div class="project-hero-right">
-          {{ with .Params.about }}
-            <h2 class="project-about-heading">About the Project</h2>
-            <p class="project-about-text">{{ . }}</p>
-          {{ end }}
-          <div class="project-meta">
-            {{ with .Params.project_date }}
-              <div class="project-meta-item">
-                <h4 class="project-meta-label">Date:</h4>
-                <p>{{ . }}</p>
-              </div>
-            {{ end }}
-            {{ with .Params.client }}
-              <div class="project-meta-item">
-                <h4 class="project-meta-label">Client:</h4>
-                <p>{{ . }}</p>
-              </div>
-            {{ end }}
-            {{ with .Params.services }}
-              <div class="project-meta-item">
-                <h4 class="project-meta-label">Services:</h4>
-                <p>{{ . }}</p>
-              </div>
-            {{ end }}
-          </div>
+  <div class="wrap backbar"><a class="back" href="/#work">← back to work</a></div>
+
+  <header class="p-hero">
+    <div class="wrap">
+      {{ with .Params.category }}<span class="tag-type">{{ . }}</span>{{ end }}
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.summary }}<p class="sub">{{ . }}</p>{{ end }}
+    </div>
+    {{ $hero := .Params.hero_image }}
+    {{ $color := .Params.hero_color }}
+    {{ with $hero }}
+      <div class="wrap">
+        <div class="hero-shot reveal"{{ with $color }} style="background:{{ . }};"{{ end }}>
+          <img src="/images/projects/{{ . }}" alt="{{ $.Title }}">
         </div>
       </div>
+    {{ end }}
+  </header>
+
+  <section class="meta">
+    <div class="wrap meta-grid">
+      {{ with (.Params.role | default "Product Designer") }}
+        <div class="meta-cell"><div class="lab">my role</div><div class="val">{{ . }}</div></div>
+      {{ end }}
+      {{ with (.Params.timeline | default .Params.project_date) }}
+        <div class="meta-cell"><div class="lab">timeline</div><div class="val">{{ . }}</div></div>
+      {{ end }}
+      {{ with .Params.tools }}
+        <div class="meta-cell"><div class="lab">tools</div><div class="val">{{ . }}</div></div>
+      {{ end }}
+      {{ with (.Params.team | default .Params.client) }}
+        <div class="meta-cell"><div class="lab">team</div><div class="val">{{ . }}</div></div>
+      {{ end }}
     </div>
   </section>
 
-  {{ with .Params.hero_image }}
-    <div class="container">
-      <img src="/images/projects/{{ . }}" alt="{{ $.Title }}" class="project-hero-image">
-    </div>
+  {{ with .Params.about }}
+    <section class="block">
+      <div class="narrow reveal">
+        <span class="eyebrow">the overview</span>
+        <h2 class="big">About {{ $.Title }}</h2>
+        <div class="prose"><p>{{ . }}</p></div>
+      </div>
+    </section>
   {{ end }}
 
-  <div class="container">
-    <div class="project-content">
-      {{ .Content }}
-    </div>
-  </div>
-
-  <section class="related-works">
-    <div class="container">
-      <h2 class="related-works-heading">Related Works</h2>
-      <div class="related-works-grid">
-        {{ $current := . }}
-        {{ $others := where (where site.RegularPages "Section" "projects") ".RelPermalink" "ne" $current.RelPermalink }}
-        {{ range first 2 ($others.ByWeight) }}
-          <div class="related-works-item">
-            <a href="{{ .RelPermalink }}">
-              {{ with .Params.thumbnail }}
-                <img loading="lazy" alt="{{ $.Title }}" src="/images/projects/{{ . }}" class="related-works-image">
-              {{ end }}
-            </a>
-            <h3 class="related-works-title">{{ .Title }}</h3>
-            <p>{{ .Params.summary }}</p>
-            <a href="{{ .RelPermalink }}" class="btn-link">
-              <div>View Case Study</div>
-              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 16 16 12 12 8"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-            </a>
-          </div>
+  <section class="block" style="padding-top:0">
+    <div class="wrap reveal">
+      <span class="eyebrow">how I work</span>
+      <h2 class="big">My process for {{ .Title }}</h2>
+      <div class="steps">
+        {{ $steps := .Params.process | default hugo.Data.services.items }}
+        {{ range $i, $s := $steps }}
+          <div class="step reveal"><div class="n">{{ printf "%02d" (add $i 1) }}</div><h4>{{ $s.title }}</h4><p>{{ $s.description | truncate 150 }}</p></div>
         {{ end }}
       </div>
     </div>
   </section>
 
-  <div class="container">
-    <nav class="project-nav">
-      <a href="/#portfolio">&larr; All projects</a>
-      {{ with .NextInSection }}
-        <a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>
+  <section class="block" style="padding-top:0">
+    <div class="narrow prose reveal">
+      {{ .Content }}
+    </div>
+  </section>
+
+  {{ with .Params.stats }}
+    <section class="block" style="padding-top:0">
+      <div class="wrap reveal">
+        <div class="stats">
+          {{ range . }}
+            <div class="stat"><div class="num">{{ .num }}</div><div class="lab">{{ .lab }}</div></div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ with .Params.quote }}
+    <section class="block" style="padding-top:0">
+      <p class="quote reveal">"<span class="hl">{{ . }}</span>"</p>
+    </section>
+  {{ end }}
+
+  {{ with .Params.prototype_url }}
+    {{ if ne . "#" }}
+      <section class="block" style="padding-top:0">
+        <div class="wrap reveal" style="text-align:center">
+          <a href="{{ . }}" target="_blank" rel="noopener" class="btn lime">View the prototype ↗</a>
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+
+  {{ partial "scallop.html" . }}
+
+  <section class="next">
+    <div class="wrap reveal">
+      {{ $next := .NextInSection }}
+      {{ if not $next }}
+        {{ $others := where (where site.RegularPages "Section" "projects") ".RelPermalink" "ne" .RelPermalink }}
+        {{ $next = index ($others.ByWeight) 0 }}
       {{ end }}
-    </nav>
-  </div>
+      {{ with $next }}
+        <a href="{{ .RelPermalink }}">
+          <div><span class="lab">next project →</span><h3>{{ .Title }}</h3></div>
+          <span class="arrow">↗</span>
+        </a>
+      {{ end }}
+    </div>
+  </section>
+
+  {{ partial "cta.html" (dict "heading" "Like what you see? <em>Let's talk.</em>" "text" "Got a project in mind, or just want to say hi? My inbox is always open.") }}
 {{ end }}

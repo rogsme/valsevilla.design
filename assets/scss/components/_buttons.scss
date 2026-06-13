@@ -1,89 +1,47 @@
-.btn-3d {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.btn-front {
-  position: relative;
-  z-index: 1;
-  border: $border;
-  background-color: $white;
-  color: $dark;
-  border-radius: $radius;
-  font-family: $font-heading;
-  font-size: 20px;
+.btn {
+  font-family: var(--body);
   font-weight: 700;
+  font-size: 1rem;
+  cursor: $cursor-pointer;
+  padding: 14px 26px;
+  border-radius: 40px;
+  border: 2.5px solid var(--ink);
+  background: var(--sun);
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+  transition: transform .14s, box-shadow .14s;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  transition: transform $transition-fast;
-}
-
-.btn-text {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 30px;
-}
-
-.btn-edge {
-  position: absolute;
-  z-index: 0;
-  border: $border;
-  background-color: $purple;
-  border-radius: $radius;
-  width: 100%;
-  height: 100%;
-  bottom: -5px;
-  left: 0;
-  right: 0;
-}
-
-.btn-3d:hover .btn-front {
-  transform: translateY(2px);
-}
-
-.btn-3d:hover .btn-edge {
-  bottom: -3px;
-}
-
-// Social icon buttons
-.btn-social {
-  position: relative;
-  display: inline-block;
-
-  .btn-front {
-    padding: 7px 9px;
-    font-size: 16px;
-  }
-
-  .btn-edge {
-    bottom: -5px;
-    background-color: $purple;
-  }
-
-  .social-icon {
-    width: 20px;
-    height: 20px;
-    display: block;
-  }
-}
-
-// Text link style (View Case Study →)
-.btn-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: $font-heading;
-  font-size: 19px;
-  font-weight: 700;
-  color: $dark;
-  text-decoration: none;
-  transition: color $transition-fast;
+  gap: 9px;
 
   &:hover {
-    color: $primary;
+    transform: translate(-2px, -2px);
+    box-shadow: 9px 9px 0 var(--ink);
   }
+
+  &:active {
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px 0 var(--ink);
+  }
+
+  &.dark { background: var(--ink); color: var(--cream); }
+  &.lime { background: var(--lime); }
+  &.sky { background: var(--sky); }
+  &.sun { background: var(--sun); }
+  &.pink { background: var(--pink); }
+}
+
+// Small bordered "back" pill used on project / blog pages
+.back {
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 2px solid var(--ink);
+  border-radius: 30px;
+  background: var(--cream);
+  transition: .15s;
+
+  &:hover { background: var(--lime); transform: translateX(-3px); }
 }

@@ -1,34 +1,19 @@
-<section id="home" class="hero-section">
-  <div class="wrapper background-purple border-bottom overflow-hidden">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-image-wrapper position-relative">
-          <img src="/images/hero.png" loading="lazy" alt="{{ site.Params.author }}" width="327" class="hero-image">
-          <div class="star-badge">
-            <div class="label cc-rotate">Let's create amazing experiences</div>
-          </div>
-          <img src="/images/doodles/doodle-shine.svg" loading="lazy" alt="" class="doodle-shine">
-          <img src="/images/doodles/doodle-breeze.svg" loading="lazy" alt="" class="doodle-breeze">
-        </div>
-        <div class="hero-content">
-          <div class="badge margin-bottom-30">
-            <div class="badge-text"><span class="shape-label"></span>Heeyyy!</div>
-          </div>
-          <h1 class="display-1 margin-bottom-15">I'm Valentina Sevilla, <span class="underline">product</span> designer.</h1>
-          <div class="paragraph-wrapper">
-            <div class="paragraph-large margin-bottom-45">I'm passionate about creating experiences that truly resonate with people.</div>
-          </div>
-          <a href="#portfolio" class="btn-3d">
-            <div class="btn-front">
-              <div class="btn-text">
-                <div>See My Works</div>
-                <div>↓</div>
-              </div>
-            </div>
-            <div class="btn-edge"></div>
-          </a>
-        </div>
-      </div>
+<header class="hero" id="top">
+  <div class="sticker s1"><svg width="78" height="78" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="#FFD56B" stroke="#241D36" stroke-width="5"/><circle cx="36" cy="42" r="5" fill="#241D36"/><circle cx="64" cy="42" r="5" fill="#241D36"/><path d="M34 60 Q50 76 66 60" fill="none" stroke="#241D36" stroke-width="5" stroke-linecap="round"/></svg></div>
+  <div class="sticker s2"><svg width="64" height="84" viewBox="0 0 60 80"><path d="M34 4 L10 44 H28 L24 76 L50 32 H32 Z" fill="#FF8A5C" stroke="#241D36" stroke-width="5" stroke-linejoin="round"/></svg></div>
+  <div class="sticker s3"><svg width="70" height="70" viewBox="0 0 80 80"><path d="M40 6 L48 30 L74 32 L52 48 L60 74 L40 58 L20 74 L28 48 L6 32 L32 30 Z" fill="#9FE0AE" stroke="#241D36" stroke-width="5" stroke-linejoin="round"/></svg></div>
+  <div class="sticker s4"><svg width="74" height="74" viewBox="0 0 90 90"><path d="M45 12 C58 12 60 28 52 32 C66 30 74 44 64 52 C72 62 60 76 50 68 C50 80 36 80 36 68 C24 76 14 62 24 52 C12 44 22 30 36 32 C28 26 32 12 45 12 Z" fill="#C4B2F2" stroke="#241D36" stroke-width="4.5"/></svg></div>
+  <div class="sticker s5"><svg width="58" height="58" viewBox="0 0 60 60"><path d="M30 4 L36 24 L30 20 L24 24 Z" fill="#A4D6FF" stroke="#241D36" stroke-width="4"/><path d="M30 56 L24 36 L30 40 L36 36 Z" fill="#A4D6FF" stroke="#241D36" stroke-width="4"/><path d="M4 30 L24 24 L20 30 L24 36 Z" fill="#A4D6FF" stroke="#241D36" stroke-width="4"/><path d="M56 30 L36 36 L40 30 L36 24 Z" fill="#A4D6FF" stroke="#241D36" stroke-width="4"/></svg></div>
+
+  <div class="wrap">
+    <span class="hello reveal" data-anim="blur">{{ site.Params.hero.greeting }}</span>
+    <h1 class="reveal" data-anim="blur">I'm Valentina, a<br><span class="ux">product
+      <svg viewBox="0 0 300 24" preserveAspectRatio="none"><path d="M4 16 Q80 4 150 12 T296 9" fill="none" stroke="#F368A8" stroke-width="6" stroke-linecap="round"/></svg>
+    </span> <span class="swap">designer.</span></h1>
+    <p class="reveal">{{ site.Params.hero.subheading | safeHTML }}</p>
+    <div class="hero-cta reveal">
+      <a href="#work" class="btn">See my work ↓</a>
+      <a href="#blog" class="btn lime">Read the blog</a>
     </div>
   </div>
-</section>
+</header>

@@ -1,36 +1,17 @@
-<section id="contact" class="contact-section">
-  <div class="container">
-    <div class="contact-card">
-      <div class="headline-contact">
-        <div class="badge margin-bottom-30" style="background-color: #ffc669;">
-          <div class="badge-text"><span class="shape-label"></span>Contact</div>
-        </div>
-        <h2 class="display-7">Want to see my secret portfolio? Got a project in mind? Let's get in touch.</h2>
+<section class="cta cta-contact" id="contact">
+  <div class="wrap">
+    <h2>Got a project in mind? <em>Let's get in touch.</em></h2>
+    <p>Want to see my secret portfolio? 👀 My inbox is always open.</p>
+    <form class="contact-form" action="{{ site.Params.formSubmitEndpoint }}" method="POST">
+      <input type="hidden" name="_subject" value="New contact from valsevilla.design">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+      <div class="form-fields-grid">
+        <input type="text" name="name" placeholder="What is your name *" required class="text-field">
+        <input type="email" name="email" placeholder="Your email address *" required class="text-field">
+        <textarea name="message" placeholder="Tell me about your project *" required class="text-field form-field-full"></textarea>
       </div>
-      <form class="contact-form" action="{{ site.Params.formSubmitEndpoint }}" method="POST">
-        <input type="hidden" name="_subject" value="New contact from valsevilla.design">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="_honey" style="display:none">
-        <div class="form-fields-grid">
-          <div>
-            <input type="text" name="name" placeholder="What is your name *" required class="text-field">
-          </div>
-          <div>
-            <input type="email" name="email" placeholder="Your email address *" required class="text-field">
-          </div>
-          <div class="form-field-full">
-            <textarea name="message" placeholder="Tell me about your project *" required class="text-field"></textarea>
-          </div>
-        </div>
-        <div class="contact-submit">
-          <button type="submit" class="btn-3d">
-            <div class="btn-front">
-              <div class="btn-text">Submit</div>
-            </div>
-            <div class="btn-edge" style="background-color: #1d1d1d;"></div>
-          </button>
-        </div>
-      </form>
-    </div>
+      <button type="submit" class="btn sun">Say hello →</button>
+    </form>
   </div>
 </section>

@@ -1,21 +1,12 @@
-<footer class="site-footer position-relative">
-  <div class="container cc-narrow">
-    <div class="site-details">
-      <div class="footer-row">
-        <p class="footer-copy margin-bottom-none">&copy; All rights reserved. Made with Love &lt;3</p>
-        <div class="footer-social">
-          {{ range hugo.Data.social.links }}
-            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="btn-social btn-3d" aria-label="{{ .name }}">
-              <div class="btn-front">
-                <img src="/images/social/{{ .icon }}.svg" alt="{{ .name }}" class="social-icon">
-              </div>
-              <div class="btn-edge"></div>
-            </a>
-          {{ end }}
-        </div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-bottom">
+      <span>&copy; {{ now.Format "2006" }} {{ site.Params.author }} — made with love &lt;3</span>
+      <div class="socials">
+        {{ range hugo.Data.social.links }}
+          <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
+        {{ end }}
       </div>
     </div>
-    <img src="/images/doodles/doodle-cloud.svg" loading="lazy" alt="" class="doodle-cloud">
-    <img src="/images/doodles/doodle-envelope.svg" loading="lazy" alt="" class="doodle-envelope">
   </div>
 </footer>

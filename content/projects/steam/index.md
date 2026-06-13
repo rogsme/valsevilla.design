@@ -1,5 +1,6 @@
 ---
 title: "Steam"
+draft: true
 description: "Steam is an online platform from game developer Valve where you can buy, play, create, and discuss PC games."
 date: 2021-04-01
 category: "UI/UX"
@@ -11,6 +12,10 @@ project_date: "April 2021"
 client: "Steam"
 services: "UI/UX"
 prototype_url: "https://xd.adobe.com/view/b894734e-c3c9-402b-b6b1-794a7b46a7cb-edc7/?fullscreen&hints=off"
+role: "UX/UI Designer"
+tools: "Adobe XD"
+team: "Solo project"
+tags: ["Redesign", "Gaming", "UX/UI"]
 hero_image: "steam/main-image.png"
 hero_color: "#aeaeff"
 ---

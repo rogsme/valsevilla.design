@@ -1,34 +1,13 @@
-<header class="site-header">
-  <div class="container">
-    <div class="header-inner">
-      <a href="/" class="site-logo">
-        <img src="/images/logo.svg" alt="{{ site.Title }}" width="150">
-      </a>
-
-      <nav class="nav-desktop">
-        {{ range site.Menus.main }}
-          {{ if not .Params.external }}
-            <a href="{{ .URL }}" class="nav-link{{ if eq .URL "/#home" }} is-active{{ end }}">{{ .Name }}</a>
-          {{ end }}
-        {{ end }}
-      </nav>
-
-      <div class="navbar-button-wrapper">
-        {{ range hugo.Data.social.links }}
-          <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="btn-social btn-3d" aria-label="{{ .name }}">
-            <div class="btn-front">
-              <img src="/images/social/{{ .icon }}.svg" alt="{{ .name }}" class="social-icon">
-            </div>
-            <div class="btn-edge"></div>
-          </a>
-        {{ end }}
-      </div>
-
-      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+<nav class="site-nav">
+  <div class="wrap nav-in">
+    <a href="/#top" class="logo"><span class="blob"></span>Val Sevilla<span class="logo-dot">.</span></a>
+    <div class="nav-links" id="nav-links">
+      {{ range site.Menus.main }}
+        <a href="{{ .URL }}"{{ if .Params.external }} target="_blank" rel="noopener noreferrer"{{ end }}{{ if .Params.cta }} class="nav-cta"{{ end }}>{{ .Name }}</a>
+      {{ end }}
     </div>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-</header>
+</nav>

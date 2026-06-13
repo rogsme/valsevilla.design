@@ -1,57 +1,18 @@
-<section id="about" class="about-section">
-  <div class="wrapper background-purple border-bottom">
-    <div class="container">
-      <div class="about">
-        <div class="about-grid">
-          <div class="about-image-col position-relative">
-            <img src="/images/portrait.png" loading="lazy" alt="{{ site.Params.author }}" width="580" class="about-image">
-            <img src="/images/doodles/doodle-wave.svg" loading="lazy" alt="" class="doodle-wave">
-            <div class="star-badge-blue">
-              <div class="label cc-rotate">5+ Years of Experience</div>
-            </div>
-          </div>
-          <div class="about-text-col position-relative">
-            <div class="badge margin-bottom-30">
-              <div class="badge-text"><span class="shape-label"></span>About</div>
-            </div>
-            <h1 class="display-2">More about me</h1>
-            <img src="/images/doodles/doodle-heart.svg" loading="lazy" alt="" class="doodle-heart" style="position: absolute; top: -80px; right: 15px;">
-            <div class="paragraph-large margin-bottom-25">Hey there! I'm Valentina Sevilla, a passionate UX/UI designer with a strong focus on research and collaboration, I strive to design intuitive and visually appealing solutions.</div>
-            <p>From a young age, I've been fascinated by how technology has change the way we behave and how we perceive the world. I believe that great design has the power to enhance people's lives and create memorable interactions.</p>
-            <p class="margin-bottom-none">In my spare time you can find me playing video games, playing with my cats (I have 4 already lol), watching movies and going to the gym</p>
-          </div>
-        </div>
-
-        <div class="experience-grid">
-          <div class="experience-intro position-relative">
-            <h2 class="display-3">My Experiences</h2>
-            <p class="paragraph-large margin-bottom-35">I've been crafting intuitive and visually stunning experiences for years, and I'm passionate about making sure every user interaction is top-notch</p>
-            <a href="{{ site.Params.resumeUrl }}" target="_blank" class="btn-3d">
-              <div class="btn-front">
-                <div class="btn-text">Download Resume</div>
-              </div>
-              <div class="btn-edge"></div>
-            </a>
-          </div>
-          <div>
-            <div class="timeline">
-              {{ range hugo.Data.timeline.entries }}
-                <div class="timeline-item">
-                  <div class="timeline-info">
-                    <h3 class="label">{{ .period }}</h3>
-                  </div>
-                  <div class="timeline-marker">
-                    <div class="timeline-dot background-{{ .dotColor }}"></div>
-                  </div>
-                  <div class="timeline-content">
-                    <h3>{{ .title }}</h3>
-                    <p class="margin-bottom-35">{{ .description }}</p>
-                  </div>
-                </div>
-              {{ end }}
-            </div>
-          </div>
-        </div>
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="avatar reveal" data-anim="scale">
+      <img src="/images/portrait.png" loading="lazy" alt="{{ site.Params.author }}" class="avatar-photo">
+      <div class="badge">{{ site.Params.about.yearsExperience }} yrs<br>of<br>experience</div>
+    </div>
+    <div class="reveal">
+      <span class="kicker">about me</span>
+      <h2>Hey there! I'm Valentina Sevilla.</h2>
+      <p>A passionate <b>UX/UI designer</b> with a strong focus on research and collaboration. I strive to design intuitive and visually appealing solutions, and I've been fascinated by how technology shapes the way we behave and see the world for as long as I can remember.</p>
+      <p>When I'm not designing, you'll find me <b>playing video games</b>, hanging out with my <b>4 cats</b>, watching movies, or at the gym.</p>
+      <div class="pills">
+        {{ range site.Params.about.skills }}
+          <span class="pill">{{ . }}</span>
+        {{ end }}
       </div>
     </div>
   </div>

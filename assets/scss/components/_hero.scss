@@ -1,89 +1,55 @@
-.hero-section {
-  .wrapper {
-    padding: 80px 0 60px;
-
-    @include respond-to(md) {
-      padding: 120px 0 100px;
-    }
-  }
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  align-items: center;
-
-  @include respond-to(md) {
-    grid-template-columns: 5fr 7fr;
-    gap: 0;
-  }
-}
-
-.hero-content {
-  order: 2;
+.hero {
+  padding: 84px 0 40px;
   text-align: center;
-
-  @include respond-to(md) {
-    order: 2;
-    text-align: left;
-  }
-
-  .paragraph-wrapper {
-    max-width: 600px;
-  }
-}
-
-.hero-image-wrapper {
-  order: 1;
+  overflow: hidden;
   position: relative;
+}
 
-  @include respond-to(md) {
-    order: 1;
-    justify-self: start;
-  }
+.hello {
+  font-family: var(--scrawl);
+  font-size: 2rem;
+  color: var(--pink);
+  transform: rotate(-4deg);
+  display: inline-block;
+  margin-bottom: 6px;
+}
 
-  .star-badge {
-    top: -6px;
-    left: -47px;
-  }
+.hero h1 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(2.7rem, 8vw, 6rem);
+  line-height: .96;
+  letter-spacing: -.035em;
 
-  .doodle-shine {
-    top: 40%;
-    right: -20px;
-  }
+  .swap { color: var(--pink); }
 
-  .doodle-breeze {
-    bottom: 20%;
-    right: -40px;
-  }
+  .ux {
+    position: relative;
+    white-space: nowrap;
 
-  @include respond-to(md) {
-    .doodle-shine {
-      width: 58px;
-      height: 53px;
-      top: 95px;
-      right: -70px;
-    }
-
-    .doodle-breeze {
-      width: 134px;
-      height: 95px;
-      top: 157px;
-      right: -83px;
+    svg {
+      position: absolute;
+      left: -6%;
+      bottom: -12px;
+      width: 112%;
+      height: auto;
     }
   }
 }
 
-.hero-image {
-  border: $border;
-  border-radius: 300px 300px $radius $radius;
-  width: 327px;
-  max-width: 100%;
-  margin: 0 auto;
-  display: block;
+.hero p {
+  max-width: 560px;
+  margin: 26px auto 0;
+  font-size: 1.18rem;
+  color: var(--ink-soft);
 
-  @include respond-to(md) {
-    margin: 0;
-  }
+  b { color: var(--ink); font-weight: 700; }
+}
+
+.hero-cta {
+  margin-top: 34px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
 }

@@ -1,16 +1,20 @@
-<section class="blog-section">
-  <div class="container">
-    <div id="blog"></div>
-    <div class="headline-blog">
-      <div class="badge margin-bottom-30">
-        <div class="badge-text"><span class="shape-label"></span>My Blogs</div>
-      </div>
+<section class="desk" id="blog">
+  <div class="wrap">
+    <div class="desk-head reveal">
+      <span class="kicker">from my desk</span>
+      <h2>The Blog.</h2>
+      <p>raw notes &amp; things I'm figuring out — tap a note to read it</p>
     </div>
-    <div class="blog-list">
+    <div class="notes">
       {{ range (where site.RegularPages "Section" "blog").ByDate.Reverse }}
-        <a href="{{ .RelPermalink }}" class="blog-list-item">
-          <span class="blog-list-title">{{ .Title }}</span>
-          <span class="blog-list-date">{{ .Date.Format "Jan 2006" }}</span>
+        <a class="note reveal" href="{{ .RelPermalink }}">
+          <div class="tape"></div>
+          <span class="badge-real">published ✦</span>
+          <span class="date">{{ .Date.Format "Jan 2006" }}</span>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Params.summary | default .Summary }}</p>
+          <span class="tagline">~ read the post →</span>
+          <span class="doodle-star">★</span>
         </a>
       {{ end }}
     </div>

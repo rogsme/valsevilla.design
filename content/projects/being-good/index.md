@@ -1,5 +1,6 @@
 ---
 title: "Being Good"
+draft: true
 description: "Being Good: Your path to mental and physical well-being. Guiding you with meditation, exercise, healthy habits, and professional therapy support"
 date: 2020-12-01
 category: "UI/UX"
@@ -11,6 +12,10 @@ project_date: "December 2020"
 client: "Being Good"
 services: "UI/UX"
 prototype_url: "https://xd.adobe.com/view/9fa753d1-d291-4e31-b5c3-aad381f23090-caf4/?fullscreen"
+role: "UX/UI Designer"
+tools: "Adobe XD"
+team: "Solo project"
+tags: ["Mobile", "Health", "UX/UI"]
 hero_image: "being-good/main-image.png"
 hero_color: "#ffdfdf"
 ---

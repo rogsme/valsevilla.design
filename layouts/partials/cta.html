@@ -1,0 +1,8 @@
+{{/* Shared dark CTA block for project & blog pages. Pass a dict: heading, text */}}
+<section class="cta">
+  <div class="wrap">
+    <h2>{{ .heading | safeHTML }}</h2>
+    <p>{{ .text }}</p>
+    <a href="/#contact" class="btn sky">Say hello →</a>
+  </div>
+</section>

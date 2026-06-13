@@ -11,6 +11,20 @@ project_date: "October 2023"
 client: "Apricity"
 services: "Web Design"
 prototype_url: "#"
+role: "UX/UI Designer · Visual"
+tools: "Adobe XD · Illustration"
+team: "Solo project"
+tags: ["Concept", "Web Design", "Visual"]
+quote: "The landing page looks really great! I like the solar eclipse motif — it grabs you immediately and just plainly looks beautiful."
+process:
+  - title: "Concept Exploration"
+    description: "Unpacking the meaning of apricity — the warmth of winter sun — and translating an abstract idea into a clear visual direction."
+  - title: "Visual Language"
+    description: "Defining the warm, ethereal palette and lighting that carry the narrative and set the emotional tone."
+  - title: "Narrative Structure"
+    description: "Mapping the scroll journey from existential threat to hope, leading users toward a meaningful call to action."
+  - title: "Design & Motion"
+    description: "Crafting illuminated screens and transitions that gradually warm up as the user scrolls through the story."
 hero_image: "apricity/main-hero.webp"
 hero_color: "#e5ebf2"
 ---
@@ -18,8 +32,6 @@ hero_color: "#e5ebf2"
 #### **My Role**
 
 As the UX/UI designer, my task was to transform these abstract ideas into a compelling and visually rich website that resonated with users emotionally. I was responsible for the entire design process, from concept to final execution, ensuring the visuals captured the ethereal and warming nature of *Apricity*.
-
-> The landing page looks really great! I like the solar eclipse motif, it grabs immediately and just plainly looks beautiful ❤️
 
 #### **The Challenge**
 
