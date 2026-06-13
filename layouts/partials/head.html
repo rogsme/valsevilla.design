@@ -25,4 +25,7 @@
   <!-- Styles -->
   {{ $style := resources.Get "scss/style.scss" | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" false) }}
   <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">
+
+  <!-- Analytics -->
+  <script defer src="https://analytics.rogs.me/script.js" data-website-id="d6c98568-82dc-470d-88be-05b9c31c2f6b"></script>
 </head>
